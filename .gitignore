@@ -1,0 +1,75 @@
+# Данные пользователей (не коммитить)
+backend/data/
+
+# Локальные переменные (секреты)
+.env
+backend/.env
+docker/.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Тесты и инструменты
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+
+node_modules/
+
+# Expo / RN
+mobile/.expo/
+mobile/dist/
+
+# IDE / ОС
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Профили и ключи (не коммитить)
+*.cyberduckprofile
+*.duckprofile
+id_ed25519.pub
+id_rsa.pub
+
+# Локальные БД/дампы/архивы
+*.db
+*.sqlite
+*.zip
+*.tgz
+*.tar
+*.7z
+*.rar
+
+# Временные извлечения и снапшоты
+_scaffold_extract/
+_stage1_scenarios_extract/
+_tmp_med_pack_v1/
+_tmp_med_pack_v5/
+_tmp_restore/
+multi_lab_patch_extracted/
+landing_extracted/
+release_snapshots/
+
+# Локальные импортные/кеш директории
+cursor_import/
+knowledge_cache/
+
+# Автогенерируемые timestamp-отчеты (оставляем только latest)
+backend/tests/clinical/reports/investor_quality_report_*.json
+backend/tests/clinical/reports/investor_quality_report_*.md
+backend/tests/clinical/reports/metrics_*.json
+!backend/tests/clinical/reports/investor_quality_report_latest.json
+!backend/tests/clinical/reports/investor_quality_report_latest.md
+!backend/tests/clinical/reports/release_gate_latest.json
+!backend/tests/clinical/reports/drift_debug_latest.json
