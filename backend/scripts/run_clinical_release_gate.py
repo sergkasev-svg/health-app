@@ -52,9 +52,12 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Run clinical release gate")
     parser.add_argument(
         "--level",
-        choices=["starter", "v1"],
+        choices=["starter", "v1", "v1-ci"],
         default="starter",
-        help="Gate level: starter (35 cases) or v1 (expanded clinical pack in tests/clinical/cases_clinical_v1.jsonl).",
+        help=(
+            "Gate level: starter (35 cases), v1 (full expanded clinical pack), "
+            "or v1-ci (expect-focused lightweight pack for CI)."
+        ),
     )
     args = parser.parse_args()
 
@@ -66,6 +69,9 @@ def main() -> int:
     if args.level == "v1":
         cases_path = backend_root / "tests" / "clinical" / "cases_clinical_v1.jsonl"
         thresholds_path = backend_root / "tests" / "clinical" / "release_gate_thresholds_v1.json"
+    elif args.level == "v1-ci":
+        cases_path = backend_root / "tests" / "clinical" / "cases_clinical_v1_ci_expect.jsonl"
+        thresholds_path = backend_root / "tests" / "clinical" / "release_gate_thresholds_v1_ci.json"
     else:
         cases_path = backend_root / "tests" / "clinical" / "cases_endocrine_starter.jsonl"
         thresholds_path = backend_root / "tests" / "clinical" / "release_gate_thresholds.json"
@@ -86,7 +92,8 @@ def main() -> int:
         "status": "PASS" if not failures else "FAIL",
         "failures": failures,
     }
-    out_path = reports_dir / "release_gate_latest.json"
+    out_name = "release_gate_latest.json" if args.level in ("starter", "v1") else "release_gate_v1_ci_latest.json"
+    out_path = reports_dir / out_name
     out_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
     if failures:

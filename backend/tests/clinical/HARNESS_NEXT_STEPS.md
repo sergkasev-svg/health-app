@@ -39,3 +39,11 @@
 - Проверка стабильности до ужесточения: 2 прогона gate PASS, `domain_drift_rate=0.00192..0.00385`.
 - Ужесточён порог: `max_domain_drift_rate` **0.22 → 0.20** в `release_gate_thresholds_v1.json`.
 - После ужесточения: 2 прогона gate PASS (`domain_drift_rate=0.00192`), `repair_success_at_1=1.0`, `redflag_recall=0.875`.
+
+### Шаг 5 — сделано (2026-04-25)
+- Реализован lightweight CI-гейт:
+  - `tests/clinical/cases_clinical_v1_ci_expect.jsonl` (expect-focused pack, 54 кейса)
+  - `tests/clinical/release_gate_thresholds_v1_ci.json`
+  - `scripts/run_clinical_release_gate.py --level v1-ci`
+  - отчёт: `tests/clinical/reports/release_gate_v1_ci_latest.json`
+- Добавлен workflow: `.github/workflows/clinical-v1-ci.yml` (drift debug + `v1-ci` gate на push/PR).
