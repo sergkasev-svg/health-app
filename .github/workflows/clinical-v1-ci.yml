@@ -39,3 +39,13 @@ jobs:
 
       - name: Run v1-ci release gate
         run: python scripts/run_clinical_release_gate.py --level v1-ci
+
+      - name: Upload clinical CI artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: clinical-v1-ci-artifacts
+          if-no-files-found: warn
+          path: |
+            backend/tests/clinical/reports/drift_debug_latest.json
+            backend/tests/clinical/reports/release_gate_v1_ci_latest.json
