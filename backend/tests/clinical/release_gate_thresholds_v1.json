@@ -1,0 +1,9 @@
+{
+  "min_total_cases": 1040,
+  "max_loop_rate": 0.05,
+  "max_domain_drift_rate": 0.20,
+  "min_redflag_recall": 0.70,
+  "min_repair_success_at_1": 0.0,
+  "min_non_empty_response_rate": 0.99,
+  "min_human_tone_rate": 0.85
+}
