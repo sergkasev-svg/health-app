@@ -1,0 +1,40 @@
+{
+  "id": "ent_nasal_obstruction_unilateral",
+  "category": "ent",
+  "title_ru": "Односторонняя заложенность носа",
+  "version": "v1",
+  "chief_complaint_patterns": [
+    "односторонняя заложенность носа длительно"
+  ],
+  "body_regions": [
+    "nose",
+    "ent"
+  ],
+  "must_ask": [
+    "Сколько длится заложенность?",
+    "Есть ли кровянистые выделения?",
+    "Есть ли снижение обоняния?"
+  ],
+  "red_flags": [
+    "unilateral_progressive_obstruction",
+    "recurrent_bleeding"
+  ],
+  "likely_hypotheses": [
+    "nasal_polyp_like",
+    "deviated_septum_like",
+    "neoplasm_rule_out"
+  ],
+  "possible_tests": [
+    "ent_exam",
+    "nasal_endoscopy"
+  ],
+  "self_care": [
+    "промывание носа",
+    "плановый осмотр ЛОР"
+  ],
+  "care_path": {
+    "default": "planned_or_urgent_assessment_by_symptoms",
+    "if_red_flags": "urgent_or_emergency_assessment"
+  },
+  "notes": "Phase-2 scenario pack for pre-LLM ranking and triage. Requires clinical review before production use."
+}

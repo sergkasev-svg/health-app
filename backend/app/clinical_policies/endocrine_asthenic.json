@@ -1,0 +1,19 @@
+{
+  "required_slots_male": [
+    "sleep_stress_link",
+    "autonomic_signs",
+    "labs_status"
+  ],
+  "required_slots_female": [
+    "sleep_stress_link",
+    "autonomic_signs",
+    "cycle_signs",
+    "labs_status"
+  ],
+  "blocked_topics_when_negated": [
+    "respiratory"
+  ],
+  "stop_conditions": {
+    "finish_when_labs_status_filled": true
+  }
+}

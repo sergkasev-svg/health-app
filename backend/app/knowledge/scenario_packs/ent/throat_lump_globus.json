@@ -1,0 +1,41 @@
+{
+  "id": "ent_throat_lump_globus",
+  "category": "ent",
+  "title_ru": "Ощущение кома в горле",
+  "version": "v1",
+  "chief_complaint_patterns": [
+    "ощущение кома в горле без удушья"
+  ],
+  "body_regions": [
+    "throat",
+    "ent"
+  ],
+  "must_ask": [
+    "Есть ли реальная трудность глотания?",
+    "Есть ли изжога/стресс?",
+    "Есть ли потеря веса?"
+  ],
+  "red_flags": [
+    "progressive_dysphagia",
+    "weight_loss",
+    "airway_compromise"
+  ],
+  "likely_hypotheses": [
+    "globus_sensation_like",
+    "reflux_related_laryngitis_like",
+    "anxiety_overlap"
+  ],
+  "possible_tests": [
+    "ent_exam_if_persistent"
+  ],
+  "self_care": [
+    "не перенапрягать голос",
+    "контроль рефлюкс-триггеров",
+    "наблюдение"
+  ],
+  "care_path": {
+    "default": "planned_or_urgent_assessment_by_symptoms",
+    "if_red_flags": "urgent_or_emergency_assessment"
+  },
+  "notes": "Phase-2 scenario pack for pre-LLM ranking and triage. Requires clinical review before production use."
+}

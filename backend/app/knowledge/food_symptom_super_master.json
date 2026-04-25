@@ -1,0 +1,616 @@
+{
+  "module": "food_symptom_super_master",
+  "version": "1.0",
+  "intent": "unified_patient_safe_food_reasoning",
+  "description": "Single clinical-style reasoning layer for post-meal GI and systemic complaints: upper abdominal heaviness/pain, nausea, weakness, headache, bloating, gas, diarrhea, reflux-like symptoms, right upper quadrant discomfort, dairy triggers, histamine-like triggers, and urgent routing.",
+  "reasoning_model": {
+    "flow": [
+      "symptom_cluster_detection",
+      "anatomic_zone_detection",
+      "food_trigger_detection",
+      "pattern_classification",
+      "red_flag_screening",
+      "cause_ranking",
+      "patient_safe_actions",
+      "tests_if_recurrent"
+    ],
+    "principles": [
+      "Start with common and lower-risk explanations before rare ones.",
+      "Do not default to histamine, dysbiosis, pancreatitis, or IBS from one mild episode.",
+      "Distinguish upper GI, bowel, biliary, reflux, dairy, glucose, and systemic postprandial patterns.",
+      "If red flags are present, stop household interpretation and escalate."
+    ]
+  },
+  "zones": {
+    "upper_gi_zone": {
+      "includes": [
+        "верхняя часть живота",
+        "эпигастрий",
+        "тяжесть после еды",
+        "раннее насыщение",
+        "отрыжка",
+        "тошнота"
+      ],
+      "top_patterns": [
+        "functional_dyspepsia",
+        "fatty_food_overload",
+        "reflux_pattern",
+        "simple_overeating"
+      ]
+    },
+    "right_upper_abdominal_zone": {
+      "includes": [
+        "правое подреберье",
+        "боль или тяжесть справа после жирного",
+        "горечь",
+        "тошнота"
+      ],
+      "top_patterns": [
+        "biliary_pattern",
+        "fatty_food_overload",
+        "pancreatic_warning_if_severe"
+      ]
+    },
+    "bowel_zone": {
+      "includes": [
+        "вздутие",
+        "урчание",
+        "газы",
+        "понос",
+        "позывы после еды"
+      ],
+      "top_patterns": [
+        "dairy_lactose_pattern",
+        "fodmap_fermentation_pattern",
+        "simple_overeating_or_fast_eating",
+        "ibs_pattern_if_recurrent",
+        "infectious_pattern_if_acute"
+      ]
+    },
+    "systemic_zone": {
+      "includes": [
+        "слабость",
+        "дурнота",
+        "головная боль",
+        "сонливость",
+        "головокружение после еды"
+      ],
+      "top_patterns": [
+        "postprandial_vascular_pattern",
+        "fatty_food_systemic_overload",
+        "sugar_glucose_pattern",
+        "dehydration_pattern",
+        "alcohol_or_histamine_conditional"
+      ]
+    }
+  },
+  "symptom_clusters": {
+    "upper_abdominal_heaviness_after_food": {
+      "zone": "upper_gi_zone",
+      "ranked_causes": [
+        "functional_dyspepsia",
+        "fatty_food_overload",
+        "simple_overeating",
+        "reflux_pattern"
+      ]
+    },
+    "upper_abdominal_pain_with_nausea": {
+      "zone": "upper_gi_zone",
+      "ranked_causes": [
+        "functional_dyspepsia",
+        "biliary_pattern",
+        "ulcer_or_gastritis_risk_pattern",
+        "pancreatic_warning_if_severe"
+      ]
+    },
+    "right_upper_abdominal_discomfort_after_fatty_food": {
+      "zone": "right_upper_abdominal_zone",
+      "ranked_causes": [
+        "biliary_pattern",
+        "fatty_food_overload",
+        "pancreatic_warning_if_severe"
+      ]
+    },
+    "heartburn_burning_regurgitation_after_food": {
+      "zone": "upper_gi_zone",
+      "ranked_causes": [
+        "reflux_pattern",
+        "functional_dyspepsia"
+      ]
+    },
+    "bloating_gas_diarrhea_after_dairy": {
+      "zone": "bowel_zone",
+      "ranked_causes": [
+        "dairy_lactose_pattern",
+        "simple_overeating_or_fast_eating"
+      ]
+    },
+    "bloating_gas_after_onion_garlic_beans_fruit_juice_honey": {
+      "zone": "bowel_zone",
+      "ranked_causes": [
+        "fodmap_fermentation_pattern",
+        "carbohydrate_malabsorption_pattern"
+      ]
+    },
+    "recurrent_pain_plus_stool_change_plus_bloating": {
+      "zone": "bowel_zone",
+      "ranked_causes": [
+        "ibs_pattern_if_recurrent",
+        "fodmap_fermentation_pattern"
+      ]
+    },
+    "acute_diarrhea_plus_vomiting_plus_fever": {
+      "zone": "bowel_zone",
+      "ranked_causes": [
+        "infectious_pattern_if_acute",
+        "urgent_general_route"
+      ]
+    },
+    "nausea_weakness_headache_after_fatty_food": {
+      "zone": "systemic_zone",
+      "ranked_causes": [
+        "fatty_food_systemic_overload",
+        "postprandial_vascular_pattern"
+      ]
+    },
+    "sleepiness_weakness_after_heavy_meal": {
+      "zone": "systemic_zone",
+      "ranked_causes": [
+        "postprandial_vascular_pattern",
+        "simple_overeating",
+        "sugar_glucose_pattern"
+      ]
+    },
+    "nausea_headache_after_wine_cheese_smoked_food": {
+      "zone": "systemic_zone",
+      "ranked_causes": [
+        "histamine_conditional_pattern",
+        "alcohol_related_pattern",
+        "reflux_pattern"
+      ]
+    }
+  },
+  "causes": [
+    {
+      "id": "functional_dyspepsia",
+      "title": "Диспепсия / раздражение верхнего ЖКТ",
+      "priority": "high",
+      "typical_symptoms": [
+        "верхнебрюшной дискомфорт",
+        "боль вверху живота",
+        "тошнота",
+        "раннее насыщение",
+        "переполненность после еды",
+        "отрыжка"
+      ],
+      "when_to_raise": [
+        "симптомы в верхней части живота",
+        "чаще после еды",
+        "нет выраженной кишечной инфекции",
+        "нет явных red flags"
+      ]
+    },
+    {
+      "id": "fatty_food_overload",
+      "title": "Перегрузка жирной или жареной пищей",
+      "priority": "high",
+      "typical_symptoms": [
+        "тяжесть",
+        "тошнота",
+        "переполненность",
+        "слабость",
+        "иногда головная боль"
+      ],
+      "when_to_raise": [
+        "триггер: жирное, жареное, семечки, орехи, фастфуд",
+        "есть связь с объёмом еды"
+      ]
+    },
+    {
+      "id": "reflux_pattern",
+      "title": "Рефлюкс / изжога после еды",
+      "priority": "high",
+      "typical_symptoms": [
+        "изжога",
+        "жжение",
+        "кислая отрыжка",
+        "горечь",
+        "хуже лёжа"
+      ],
+      "when_to_raise": [
+        "жжение или кислый привкус",
+        "хуже после позднего ужина или в положении лёжа"
+      ]
+    },
+    {
+      "id": "biliary_pattern",
+      "title": "Желчный паттерн",
+      "priority": "high",
+      "typical_symptoms": [
+        "тяжесть или боль справа под рёбрами",
+        "тошнота",
+        "горечь",
+        "иногда рвота",
+        "иногда отдаёт в спину или плечо"
+      ],
+      "when_to_raise": [
+        "реакция после жирной пищи",
+        "локализация справа или вверху живота"
+      ]
+    },
+    {
+      "id": "dairy_lactose_pattern",
+      "title": "Лактозный / молочный паттерн",
+      "priority": "high",
+      "typical_symptoms": [
+        "вздутие",
+        "газы",
+        "урчание",
+        "диарея",
+        "тошнота",
+        "боль в животе"
+      ],
+      "when_to_raise": [
+        "чёткая связь с молочным",
+        "симптомы через несколько часов после продукта"
+      ]
+    },
+    {
+      "id": "fodmap_fermentation_pattern",
+      "title": "FODMAP / брожение углеводов",
+      "priority": "high",
+      "typical_symptoms": [
+        "вздутие",
+        "газы",
+        "урчание",
+        "распирание",
+        "послабление стула"
+      ],
+      "when_to_raise": [
+        "лук, чеснок, бобовые, часть фруктов, соки, мёд, сахарные спирты",
+        "температуры нет"
+      ]
+    },
+    {
+      "id": "ibs_pattern_if_recurrent",
+      "title": "IBS-паттерн, если жалобы повторяются",
+      "priority": "conditional",
+      "typical_symptoms": [
+        "повторяющаяся боль в животе",
+        "изменение стула",
+        "вздутие",
+        "связь с дефекацией"
+      ],
+      "when_to_raise": [
+        "это не разовый эпизод",
+        "боль повторяется и связана с кишечником"
+      ]
+    },
+    {
+      "id": "infectious_pattern_if_acute",
+      "title": "Острый инфекционный кишечный паттерн",
+      "priority": "conditional_high",
+      "typical_symptoms": [
+        "диарея",
+        "рвота",
+        "температура",
+        "слабость",
+        "боль в животе"
+      ],
+      "when_to_raise": [
+        "острое начало",
+        "рвота и/или температура",
+        "подозрительная еда или контакты"
+      ]
+    },
+    {
+      "id": "postprandial_vascular_pattern",
+      "title": "Сосудистая / вегетативная реакция после еды",
+      "priority": "medium_high",
+      "typical_symptoms": [
+        "слабость",
+        "сонливость",
+        "дурнота",
+        "лёгкая тошнота",
+        "головокружение"
+      ],
+      "when_to_raise": [
+        "обильная еда",
+        "нет выраженной боли",
+        "ощущение ватности или слабости"
+      ]
+    },
+    {
+      "id": "sugar_glucose_pattern",
+      "title": "Реакция на сладкое / глюкозный паттерн",
+      "priority": "medium",
+      "typical_symptoms": [
+        "слабость",
+        "головокружение",
+        "дрожь",
+        "потливость",
+        "тошнота",
+        "головная боль"
+      ],
+      "when_to_raise": [
+        "триггер: сладкое, десерты, сладкие напитки",
+        "быстрое начало после сладкого"
+      ]
+    },
+    {
+      "id": "histamine_conditional_pattern",
+      "title": "Гистаминовый паттерн, если есть типичная картина",
+      "priority": "conditional",
+      "typical_symptoms": [
+        "головная боль",
+        "покраснение",
+        "сердцебиение",
+        "заложенность носа",
+        "зуд",
+        "тошнота"
+      ],
+      "when_to_raise": [
+        "повторяемость именно на вино, сыр, копчёности, ферментированные продукты",
+        "есть flushing, сердцебиение, кожные или носовые симптомы"
+      ],
+      "warning": "Не использовать как объяснение по умолчанию."
+    },
+    {
+      "id": "alcohol_related_pattern",
+      "title": "Алкогольная / смешанная реакция",
+      "priority": "conditional",
+      "typical_symptoms": [
+        "тошнота",
+        "головная боль",
+        "слабость",
+        "покраснение"
+      ]
+    },
+    {
+      "id": "ulcer_or_gastritis_risk_pattern",
+      "title": "Гастрит/язвенный риск-паттерн",
+      "priority": "conditional_high",
+      "typical_symptoms": [
+        "жжение или боль вверху живота",
+        "тошнота",
+        "упорные симптомы",
+        "иногда ночные симптомы"
+      ],
+      "when_to_raise": [
+        "повторяемость",
+        "НПВП, алкоголь, известный гастрит/язва"
+      ]
+    },
+    {
+      "id": "pancreatic_warning_if_severe",
+      "title": "Панкреатический настораживающий паттерн",
+      "priority": "urgent_if_typical",
+      "typical_symptoms": [
+        "сильная боль вверху живота",
+        "боль в спину",
+        "рвота",
+        "температура",
+        "резкое ухудшение"
+      ],
+      "warning": "Не использовать для лёгкой тяжести после еды без тяжёлых признаков."
+    },
+    {
+      "id": "simple_overeating",
+      "title": "Переедание",
+      "priority": "medium",
+      "typical_symptoms": [
+        "переполненность",
+        "тяжесть",
+        "сонливость",
+        "лёгкая тошнота",
+        "отрыжка"
+      ]
+    },
+    {
+      "id": "simple_overeating_or_fast_eating",
+      "title": "Переедание / слишком быстрый приём пищи",
+      "priority": "medium",
+      "typical_symptoms": [
+        "вздутие",
+        "урчание",
+        "газы",
+        "тяжесть",
+        "отрыжка"
+      ]
+    },
+    {
+      "id": "fatty_food_systemic_overload",
+      "title": "Системная реакция на жирную пищу",
+      "priority": "medium_high",
+      "typical_symptoms": [
+        "тошнота",
+        "слабость",
+        "головная боль",
+        "сонливость"
+      ]
+    },
+    {
+      "id": "carbohydrate_malabsorption_pattern",
+      "title": "Непереносимость части углеводов",
+      "priority": "conditional",
+      "typical_symptoms": [
+        "вздутие",
+        "газы",
+        "урчание",
+        "диарея"
+      ]
+    },
+    {
+      "id": "urgent_general_route",
+      "title": "Общая срочная ветка",
+      "priority": "urgent",
+      "typical_symptoms": [
+        "кровь в стуле",
+        "чёрный стул",
+        "кровь в рвоте",
+        "обморок",
+        "одышка",
+        "боль в груди",
+        "желтуха",
+        "сильная постоянная боль",
+        "неукротимая рвота",
+        "обезвоживание"
+      ]
+    },
+    {
+      "id": "dehydration_pattern",
+      "title": "Лёгкое обезвоживание",
+      "priority": "medium",
+      "typical_symptoms": [
+        "головная боль",
+        "слабость",
+        "сухость во рту",
+        "дурнота",
+        "тошнота"
+      ]
+    },
+    {
+      "id": "alcohol_or_histamine_conditional",
+      "title": "Алкогольный/гистаминоподобный условный паттерн",
+      "priority": "conditional",
+      "typical_symptoms": [
+        "головная боль",
+        "покраснение",
+        "сердцебиение",
+        "тошнота",
+        "слабость"
+      ]
+    }
+  ],
+  "trigger_groups": {
+    "fatty_fried": [
+      "жареный картофель",
+      "семечки",
+      "орехи",
+      "фастфуд",
+      "жирное мясо",
+      "маслянистая еда"
+    ],
+    "dairy": [
+      "молоко",
+      "сливки",
+      "мороженое",
+      "мягкие молочные продукты",
+      "творог"
+    ],
+    "histamine_like": [
+      "вино",
+      "сыр",
+      "копчёности",
+      "выдержанные продукты",
+      "ферментированные продукты"
+    ],
+    "fodmap_like": [
+      "лук",
+      "чеснок",
+      "бобовые",
+      "часть фруктов",
+      "соки",
+      "мёд",
+      "сахарные спирты"
+    ],
+    "sweet_load": [
+      "десерты",
+      "сладкие напитки",
+      "много сладкого",
+      "сладкое после жирного"
+    ]
+  },
+  "red_flags": [
+    "сильная или нарастающая боль в верхней части живота",
+    "сильная боль справа под рёбрами",
+    "боль, отдающая в спину",
+    "многократная рвота",
+    "температура или озноб",
+    "чёрный стул",
+    "кровь в рвоте",
+    "кровь в стуле",
+    "обморок",
+    "выраженное головокружение",
+    "одышка",
+    "боль в груди",
+    "желтуха",
+    "невозможность пить жидкость",
+    "редкое мочеиспускание / признаки обезвоживания",
+    "резкое ухудшение общего состояния"
+  ],
+  "actions_patient_safe": {
+    "default_now": [
+      "пить воду маленькими порциями",
+      "не ложиться сразу после еды",
+      "временно избегать жирной, тяжёлой и раздражающей пищи",
+      "наблюдать за динамикой в ближайшие часы",
+      "фиксировать, какой продукт стал триггером, если это повторяется"
+    ],
+    "if_reflux_like": [
+      "не ложиться",
+      "не есть поздно",
+      "избегать переедания"
+    ],
+    "if_bloating_diarrhea_like": [
+      "следить за жидкостью",
+      "временно упростить питание",
+      "оценить связь с молочным, сладким, FODMAP-продуктами"
+    ],
+    "if_systemic_weakness_like": [
+      "сесть или прилечь с приподнятой головой",
+      "оценить, не было ли сладкого, алкоголя, большой тяжёлой еды и нехватки жидкости"
+    ]
+  },
+  "tests_logic": {
+    "single_mild_episode": {
+      "recommend_immediate_tests": false,
+      "message": "При единичном лёгком эпизоде без красных флагов срочные анализы обычно не нужны."
+    },
+    "recurrent_upper_gi_or_fatty_food_pattern": {
+      "recommend_tests": [
+        "АЛТ",
+        "АСТ",
+        "билирубин",
+        "ГГТ",
+        "амилаза",
+        "липаза",
+        "УЗИ органов брюшной полости"
+      ]
+    },
+    "recurrent_dairy_pattern": {
+      "recommend_tests": [
+        "оценка непереносимости молочного по симптомам и пищевому дневнику"
+      ]
+    },
+    "recurrent_dyspepsia_or_ulcer_risk_pattern": {
+      "recommend_tests": [
+        "обсуждение H. pylori",
+        "оценка приёма НПВП и алкоголя",
+        "дальнейшая диагностика по клинической необходимости"
+      ]
+    },
+    "histamine_pattern": {
+      "recommend_tests": [
+        "обсуждать только при типичном повторяемом паттерне"
+      ],
+      "avoid": [
+        "не рекомендовать всем подряд DAO",
+        "не рекомендовать всем подряд гистамин в крови",
+        "не рекомендовать IgG-панели совместимости"
+      ]
+    },
+    "urgent_pattern": {
+      "recommend_urgent_evaluation": true
+    }
+  },
+  "output_template": {
+    "patient_safe_sections": [
+      "что вероятнее всего",
+      "какие ещё причины возможны",
+      "что делать сейчас",
+      "когда срочно обращаться",
+      "нужны ли анализы, если это повторяется"
+    ]
+  }
+}

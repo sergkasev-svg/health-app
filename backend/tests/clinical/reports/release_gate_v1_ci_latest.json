@@ -1,7 +1,7 @@
 {
-  "generated_at_utc": "2026-04-25T12:05:55.259195+00:00",
-  "cases_file": "D:\\website zazdorovie.ru\\health-app\\backend\\tests\\clinical\\cases_clinical_v1_ci_expect.jsonl",
-  "thresholds_file": "D:\\website zazdorovie.ru\\health-app\\backend\\tests\\clinical\\release_gate_thresholds_v1_ci.json",
+  "generated_at_utc": "2026-04-25T14:04:35.179977+00:00",
+  "cases_file": "C:\\Users\\Gamer\\health-app\\backend\\tests\\clinical\\cases_clinical_v1_ci_expect.jsonl",
+  "thresholds_file": "C:\\Users\\Gamer\\health-app\\backend\\tests\\clinical\\release_gate_thresholds_v1_ci.json",
   "gate_level": "v1-ci",
   "thresholds": {
     "min_total_cases": 50,
@@ -15,12 +15,15 @@
   "metrics": {
     "total_cases": 54.0,
     "loop_rate": 0.0,
-    "domain_drift_rate": 0.0,
-    "redflag_recall": 0.8125,
+    "domain_drift_rate": 0.037037037037037035,
+    "redflag_recall": 0.5625,
     "repair_success_at_1": 1.0,
     "non_empty_response_rate": 1.0,
-    "human_tone_rate": 0.9629629629629629
+    "human_tone_rate": 0.8148148148148148
   },
-  "status": "PASS",
-  "failures": []
+  "status": "FAIL",
+  "failures": [
+    "redflag_recall=0.5625 < min_redflag_recall=0.7",
+    "human_tone_rate=0.8148148148148148 < min_human_tone_rate=0.9"
+  ]
 }

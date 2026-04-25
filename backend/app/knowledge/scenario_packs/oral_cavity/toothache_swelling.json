@@ -1,0 +1,19 @@
+{
+  "id": "oral_toothache_swelling",
+  "chief_complaint": "зубная боль",
+  "hypotheses": [
+    "dental_abscess",
+    "pulpitis",
+    "periodontitis"
+  ],
+  "must_ask": [
+    "Есть ли отек десны или щеки?",
+    "Есть ли температура?",
+    "Боль постоянная или только на горячее/холодное?"
+  ],
+  "red_flags": [
+    "facial_swelling",
+    "trouble_swallowing",
+    "fever_with_dental_pain"
+  ]
+}

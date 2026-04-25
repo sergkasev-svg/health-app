@@ -1,0 +1,41 @@
+{
+  "id": "ent_sinusitis_purulent",
+  "category": "ent",
+  "title_ru": "Гнойный насморк и боль в пазухах",
+  "version": "v1",
+  "chief_complaint_patterns": [
+    "длительный насморк с болью в пазухах"
+  ],
+  "body_regions": [
+    "nose",
+    "sinus",
+    "ent"
+  ],
+  "must_ask": [
+    "Сколько дней симптомы?",
+    "Есть ли температура?",
+    "Усиливается ли боль при наклоне?"
+  ],
+  "red_flags": [
+    "orbital_swelling",
+    "severe_headache",
+    "high_fever"
+  ],
+  "likely_hypotheses": [
+    "acute_rhinosinusitis_like",
+    "bacterial_sinusitis_like"
+  ],
+  "possible_tests": [
+    "ent_exam"
+  ],
+  "self_care": [
+    "промывание носа",
+    "достаточное питье",
+    "контроль температуры"
+  ],
+  "care_path": {
+    "default": "planned_or_urgent_assessment_by_symptoms",
+    "if_red_flags": "urgent_or_emergency_assessment"
+  },
+  "notes": "Phase-2 scenario pack for pre-LLM ranking and triage. Requires clinical review before production use."
+}

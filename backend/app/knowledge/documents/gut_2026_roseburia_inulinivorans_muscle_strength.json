@@ -1,0 +1,35 @@
+{
+  "doc_id": "gut_2026_roseburia_inulinivorans_muscle_strength",
+  "entity_links": [
+    "microbe:roseburia_inulinivorans",
+    "concept:gut_muscle_axis",
+    "condition:sarcopenia",
+    "condition:muscle_atrophy",
+    "metabolite:butyrate",
+    "marker:grip_strength",
+    "marker:vo2_max"
+  ],
+  "source_links": [
+    {
+      "type": "doi",
+      "value": "10.1136/gutjnl-2025-336980"
+    },
+    {
+      "type": "url",
+      "value": "https://gut.bmj.com/content/early/2026/03/03/gutjnl-2025-336980"
+    },
+    {
+      "type": "pubmed",
+      "value": "41806991"
+    }
+  ],
+  "retrieval_tags": [
+    "microbiome",
+    "gut-muscle",
+    "muscle strength",
+    "roseburia",
+    "butyrate",
+    "aging"
+  ],
+  "reference_text": "Roseburia inulinivorans — кишечная бутират-продуцирующая бактерия, которая в новом исследовании была связана с более высокой мышечной силой у людей. В мышиной модели её введение сопровождалось увеличением силы хвата и признаками более благоприятного мышечного метаболизма. Это поддерживает концепцию оси «кишечник—мышцы» и делает R. inulinivorans перспективным кандидатом для дальнейших исследований при саркопении и возрастном снижении мышечной функции. Однако на текущий момент это не является доказанной терапией для человека и не должно использоваться как самостоятельное основание для лечения."
+}

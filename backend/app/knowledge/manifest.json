@@ -1,0 +1,1181 @@
+{
+  "count": 196,
+  "items": [
+    {
+      "id": "allergy_skin_anaphylaxis_warning",
+      "category": "allergy_skin",
+      "title_ru": "Аллергия с угрозой анафилаксии",
+      "path": "backend/app/knowledge/scenario_packs/allergy_skin/anaphylaxis_warning.json"
+    },
+    {
+      "id": "allergy_skin_child_rash_fever",
+      "category": "allergy_skin",
+      "title_ru": "Сыпь и температура",
+      "path": "backend/app/knowledge/scenario_packs/allergy_skin/child_rash_fever.json"
+    },
+    {
+      "id": "allergy_skin_contact_dermatitis",
+      "category": "allergy_skin",
+      "title_ru": "Раздражение после контакта",
+      "path": "backend/app/knowledge/scenario_packs/allergy_skin/contact_dermatitis.json"
+    },
+    {
+      "id": "allergy_skin_drug_rash",
+      "category": "allergy_skin",
+      "title_ru": "Сыпь после лекарства",
+      "path": "backend/app/knowledge/scenario_packs/allergy_skin/drug_rash.json"
+    },
+    {
+      "id": "allergy_skin_eczema_flare",
+      "category": "allergy_skin",
+      "title_ru": "Обострение экземы",
+      "path": "backend/app/knowledge/scenario_packs/allergy_skin/eczema_flare.json"
+    },
+    {
+      "id": "allergy_skin_eyelid_swelling",
+      "category": "allergy_skin",
+      "title_ru": "Отек век",
+      "path": "backend/app/knowledge/scenario_packs/allergy_skin/eyelid_swelling.json"
+    },
+    {
+      "id": "allergy_skin_facial_flush_histamine",
+      "category": "allergy_skin",
+      "title_ru": "Покраснение лица после еды",
+      "path": "backend/app/knowledge/scenario_packs/allergy_skin/facial_flush_histamine.json"
+    },
+    {
+      "id": "allergy_skin_hives",
+      "category": "allergy_skin",
+      "title_ru": "Крапивница",
+      "path": "backend/app/knowledge/scenario_packs/allergy_skin/hives.json"
+    },
+    {
+      "id": "allergy_skin_insect_bite_reaction",
+      "category": "allergy_skin",
+      "title_ru": "Реакция на укус",
+      "path": "backend/app/knowledge/scenario_packs/allergy_skin/insect_bite_reaction.json"
+    },
+    {
+      "id": "allergy_skin_itching_rash",
+      "category": "allergy_skin",
+      "title_ru": "Зуд и сыпь",
+      "path": "backend/app/knowledge/scenario_packs/allergy_skin/itching_rash.json"
+    },
+    {
+      "id": "allergy_skin_itching_without_rash",
+      "category": "allergy_skin",
+      "title_ru": "Зуд без заметной сыпи",
+      "path": "backend/app/knowledge/scenario_packs/allergy_skin/itching_without_rash.json"
+    },
+    {
+      "id": "allergy_skin_lip_swelling",
+      "category": "allergy_skin",
+      "title_ru": "Отек губ",
+      "path": "backend/app/knowledge/scenario_packs/allergy_skin/lip_swelling.json"
+    },
+    {
+      "id": "allergy_skin_nail_fungus_like",
+      "category": "allergy_skin",
+      "title_ru": "Изменение ногтя",
+      "path": "backend/app/knowledge/scenario_packs/allergy_skin/nail_fungus_like.json"
+    },
+    {
+      "id": "allergy_skin_nasal_allergy_skin",
+      "category": "allergy_skin",
+      "title_ru": "Аллергия с насморком и зудом",
+      "path": "backend/app/knowledge/scenario_packs/allergy_skin/nasal_allergy_skin.json"
+    },
+    {
+      "id": "allergy_skin_skin_infection_like",
+      "category": "allergy_skin",
+      "title_ru": "Покраснение и болезненность кожи",
+      "path": "backend/app/knowledge/scenario_packs/allergy_skin/skin_infection_like.json"
+    },
+    {
+      "id": "allergy_skin_sun_rash",
+      "category": "allergy_skin",
+      "title_ru": "Сыпь после солнца",
+      "path": "backend/app/knowledge/scenario_packs/allergy_skin/sun_rash.json"
+    },
+    {
+      "id": "cardio_bp_spike_nosebleed",
+      "category": "cardio",
+      "title_ru": "Скачок давления и носовое кровотечение",
+      "path": "backend/app/knowledge/scenario_packs/cardio/bp_spike_nosebleed.json"
+    },
+    {
+      "id": "cardio_chest_pain_after_meal",
+      "category": "cardio",
+      "title_ru": "Боль в груди после еды",
+      "path": "backend/app/knowledge/scenario_packs/cardio/chest_pain_after_meal.json"
+    },
+    {
+      "id": "cardio_chest_pain_anxiety",
+      "category": "cardio",
+      "title_ru": "Боль в груди на фоне тревоги",
+      "path": "backend/app/knowledge/scenario_packs/cardio/chest_pain_anxiety.json"
+    },
+    {
+      "id": "cardio_chest_pain_exertion",
+      "category": "cardio",
+      "title_ru": "Боль в груди при нагрузке",
+      "path": "backend/app/knowledge/scenario_packs/cardio/chest_pain_exertion.json"
+    },
+    {
+      "id": "cardio_chest_pain_rest",
+      "category": "cardio",
+      "title_ru": "Боль в груди в покое",
+      "path": "backend/app/knowledge/scenario_packs/cardio/chest_pain_rest.json"
+    },
+    {
+      "id": "cardio_cyanosis_warning",
+      "category": "cardio",
+      "title_ru": "Синюшность губ и одышка",
+      "path": "backend/app/knowledge/scenario_packs/cardio/cyanosis_warning.json"
+    },
+    {
+      "id": "cardio_fainting",
+      "category": "cardio",
+      "title_ru": "Обморок",
+      "path": "backend/app/knowledge/scenario_packs/cardio/fainting.json"
+    },
+    {
+      "id": "cardio_high_bp_headache",
+      "category": "cardio",
+      "title_ru": "Высокое давление и головная боль",
+      "path": "backend/app/knowledge/scenario_packs/cardio/high_bp_headache.json"
+    },
+    {
+      "id": "cardio_irregular_pulse",
+      "category": "cardio",
+      "title_ru": "Нерегулярный пульс",
+      "path": "backend/app/knowledge/scenario_packs/cardio/irregular_pulse.json"
+    },
+    {
+      "id": "cardio_leg_swelling_breathless",
+      "category": "cardio",
+      "title_ru": "Отеки ног и одышка",
+      "path": "backend/app/knowledge/scenario_packs/cardio/leg_swelling_breathless.json"
+    },
+    {
+      "id": "cardio_low_bp_weakness",
+      "category": "cardio",
+      "title_ru": "Слабость и низкое давление",
+      "path": "backend/app/knowledge/scenario_packs/cardio/low_bp_weakness.json"
+    },
+    {
+      "id": "cardio_one_sided_leg_swelling",
+      "category": "cardio",
+      "title_ru": "Односторонний отек ноги",
+      "path": "backend/app/knowledge/scenario_packs/cardio/one_sided_leg_swelling.json"
+    },
+    {
+      "id": "cardio_orthopnea_like",
+      "category": "cardio",
+      "title_ru": "Одышка лежа",
+      "path": "backend/app/knowledge/scenario_packs/cardio/orthopnea_like.json"
+    },
+    {
+      "id": "cardio_palpitations",
+      "category": "cardio",
+      "title_ru": "Сердцебиение",
+      "path": "backend/app/knowledge/scenario_packs/cardio/palpitations.json"
+    },
+    {
+      "id": "cardio_shortness_breath_chest",
+      "category": "cardio",
+      "title_ru": "Одышка и дискомфорт в груди",
+      "path": "backend/app/knowledge/scenario_packs/cardio/shortness_breath_chest.json"
+    },
+    {
+      "id": "cardio_sudden_racing_heart",
+      "category": "cardio",
+      "title_ru": "Внезапное сильное сердцебиение",
+      "path": "backend/app/knowledge/scenario_packs/cardio/sudden_racing_heart.json"
+    },
+    {
+      "id": "ent_cervical_lymph_nodes_pain",
+      "category": "ent",
+      "title_ru": "Болезненные лимфоузлы шеи",
+      "path": "backend/app/knowledge/scenario_packs/ent/cervical_lymph_nodes_pain.json"
+    },
+    {
+      "id": "ent_ear_discharge",
+      "category": "ent",
+      "title_ru": "Выделения из уха",
+      "path": "backend/app/knowledge/scenario_packs/ent/ear_discharge.json"
+    },
+    {
+      "id": "ent_ear_pain_swimmer",
+      "category": "ent",
+      "title_ru": "Боль в ухе после воды",
+      "path": "backend/app/knowledge/scenario_packs/ent/ear_pain_swimmer.json"
+    },
+    {
+      "id": "ent_hearing_loss_sudden",
+      "category": "ent",
+      "title_ru": "Внезапное снижение слуха",
+      "path": "backend/app/knowledge/scenario_packs/ent/hearing_loss_sudden.json"
+    },
+    {
+      "id": "ent_hoarseness_persistent",
+      "category": "ent",
+      "title_ru": "Осиплость более 2 недель",
+      "path": "backend/app/knowledge/scenario_packs/ent/hoarseness_persistent.json"
+    },
+    {
+      "id": "ent_nasal_bleeding_recurrent",
+      "category": "ent",
+      "title_ru": "Повторные носовые кровотечения",
+      "path": "backend/app/knowledge/scenario_packs/ent/nasal_bleeding_recurrent.json"
+    },
+    {
+      "id": "ent_nasal_obstruction_unilateral",
+      "category": "ent",
+      "title_ru": "Односторонняя заложенность носа",
+      "path": "backend/app/knowledge/scenario_packs/ent/nasal_obstruction_unilateral.json"
+    },
+    {
+      "id": "ent_postnasal_drip_cough",
+      "category": "ent",
+      "title_ru": "Кашель из-за стекания слизи",
+      "path": "backend/app/knowledge/scenario_packs/ent/postnasal_drip_cough.json"
+    },
+    {
+      "id": "ent_sinusitis_headache_fever",
+      "category": "ent",
+      "title_ru": "Синусит с головной болью и температурой",
+      "path": "backend/app/knowledge/scenario_packs/ent/sinusitis_headache_fever.json"
+    },
+    {
+      "id": "ent_sinusitis_purulent",
+      "category": "ent",
+      "title_ru": "Гнойный насморк и боль в пазухах",
+      "path": "backend/app/knowledge/scenario_packs/ent/sinusitis_purulent.json"
+    },
+    {
+      "id": "ent_snoring_apnea_like",
+      "category": "ent",
+      "title_ru": "Храп и остановки дыхания во сне",
+      "path": "backend/app/knowledge/scenario_packs/ent/snoring_apnea_like.json"
+    },
+    {
+      "id": "ent_throat_lump_globus",
+      "category": "ent",
+      "title_ru": "Ощущение кома в горле",
+      "path": "backend/app/knowledge/scenario_packs/ent/throat_lump_globus.json"
+    },
+    {
+      "id": "ent_tinnitus_new",
+      "category": "ent",
+      "title_ru": "Новый шум в ушах",
+      "path": "backend/app/knowledge/scenario_packs/ent/tinnitus_new.json"
+    },
+    {
+      "id": "ent_tonsillitis_exudate",
+      "category": "ent",
+      "title_ru": "Боль в горле с налетами",
+      "path": "backend/app/knowledge/scenario_packs/ent/tonsillitis_exudate.json"
+    },
+    {
+      "id": "ent_vertigo_ent",
+      "category": "ent",
+      "title_ru": "Головокружение с ЛОР-признаками",
+      "path": "backend/app/knowledge/scenario_packs/ent/vertigo_ent.json"
+    },
+    {
+      "id": "fatigue_deficiency_brain_fog",
+      "category": "fatigue_deficiency",
+      "title_ru": "Туман в голове",
+      "path": "backend/app/knowledge/scenario_packs/fatigue_deficiency/brain_fog.json"
+    },
+    {
+      "id": "fatigue_deficiency_brittle_nails",
+      "category": "fatigue_deficiency",
+      "title_ru": "Ломкие ногти и слабость",
+      "path": "backend/app/knowledge/scenario_packs/fatigue_deficiency/brittle_nails.json"
+    },
+    {
+      "id": "fatigue_deficiency_cold_intolerance",
+      "category": "fatigue_deficiency",
+      "title_ru": "Зябкость и усталость",
+      "path": "backend/app/knowledge/scenario_packs/fatigue_deficiency/cold_intolerance.json"
+    },
+    {
+      "id": "fatigue_deficiency_fatigue_after_infection",
+      "category": "fatigue_deficiency",
+      "title_ru": "Слабость после инфекции",
+      "path": "backend/app/knowledge/scenario_packs/fatigue_deficiency/fatigue_after_infection.json"
+    },
+    {
+      "id": "fatigue_deficiency_fatigue_dizziness",
+      "category": "fatigue_deficiency",
+      "title_ru": "Слабость и головокружение",
+      "path": "backend/app/knowledge/scenario_packs/fatigue_deficiency/fatigue_dizziness.json"
+    },
+    {
+      "id": "fatigue_deficiency_fatigue_general",
+      "category": "fatigue_deficiency",
+      "title_ru": "Общая слабость",
+      "path": "backend/app/knowledge/scenario_packs/fatigue_deficiency/fatigue_general.json"
+    },
+    {
+      "id": "fatigue_deficiency_fatigue_hair_loss",
+      "category": "fatigue_deficiency",
+      "title_ru": "Слабость и выпадение волос",
+      "path": "backend/app/knowledge/scenario_packs/fatigue_deficiency/fatigue_hair_loss.json"
+    },
+    {
+      "id": "fatigue_deficiency_fatigue_pale",
+      "category": "fatigue_deficiency",
+      "title_ru": "Слабость и бледность",
+      "path": "backend/app/knowledge/scenario_packs/fatigue_deficiency/fatigue_pale.json"
+    },
+    {
+      "id": "fatigue_deficiency_heavy_periods_fatigue",
+      "category": "fatigue_deficiency",
+      "title_ru": "Сильные месячные и слабость",
+      "path": "backend/app/knowledge/scenario_packs/fatigue_deficiency/heavy_periods_fatigue.json"
+    },
+    {
+      "id": "fatigue_deficiency_muscle_weakness",
+      "category": "fatigue_deficiency",
+      "title_ru": "Мышечная слабость",
+      "path": "backend/app/knowledge/scenario_packs/fatigue_deficiency/muscle_weakness.json"
+    },
+    {
+      "id": "fatigue_deficiency_night_sweats_fatigue",
+      "category": "fatigue_deficiency",
+      "title_ru": "Ночные поты и слабость",
+      "path": "backend/app/knowledge/scenario_packs/fatigue_deficiency/night_sweats_fatigue.json"
+    },
+    {
+      "id": "fatigue_deficiency_palpitations_fatigue",
+      "category": "fatigue_deficiency",
+      "title_ru": "Сердцебиение и слабость",
+      "path": "backend/app/knowledge/scenario_packs/fatigue_deficiency/palpitations_fatigue.json"
+    },
+    {
+      "id": "fatigue_deficiency_restless_legs_iron_like",
+      "category": "fatigue_deficiency",
+      "title_ru": "Неприятные ощущения в ногах вечером",
+      "path": "backend/app/knowledge/scenario_packs/fatigue_deficiency/restless_legs_iron_like.json"
+    },
+    {
+      "id": "fatigue_deficiency_shortness_breath_exertion_fatigue",
+      "category": "fatigue_deficiency",
+      "title_ru": "Одышка при нагрузке и усталость",
+      "path": "backend/app/knowledge/scenario_packs/fatigue_deficiency/shortness_breath_exertion_fatigue.json"
+    },
+    {
+      "id": "fatigue_deficiency_vegan_deficiency_like",
+      "category": "fatigue_deficiency",
+      "title_ru": "Слабость на фоне ограниченного питания",
+      "path": "backend/app/knowledge/scenario_packs/fatigue_deficiency/vegan_deficiency_like.json"
+    },
+    {
+      "id": "fatigue_deficiency_weight_gain_fatigue",
+      "category": "fatigue_deficiency",
+      "title_ru": "Набор веса и усталость",
+      "path": "backend/app/knowledge/scenario_packs/fatigue_deficiency/weight_gain_fatigue.json"
+    },
+    {
+      "id": "fatigue_deficiency_weight_loss_fatigue",
+      "category": "fatigue_deficiency",
+      "title_ru": "Похудение и усталость",
+      "path": "backend/app/knowledge/scenario_packs/fatigue_deficiency/weight_loss_fatigue.json"
+    },
+    {
+      "id": "gastro_abdominal_pain_after_fatty_food",
+      "category": "gastro",
+      "title_ru": "Боль после жирной еды",
+      "path": "backend/app/knowledge/scenario_packs/gastro/abdominal_pain_after_fatty_food.json"
+    },
+    {
+      "id": "gastro_black_stool_warning",
+      "category": "gastro",
+      "title_ru": "Темный стул",
+      "path": "backend/app/knowledge/scenario_packs/gastro/black_stool_warning.json"
+    },
+    {
+      "id": "gastro_bloating_after_food",
+      "category": "gastro",
+      "title_ru": "Вздутие после еды",
+      "path": "backend/app/knowledge/scenario_packs/gastro/bloating_after_food.json"
+    },
+    {
+      "id": "gastro_blood_in_stool",
+      "category": "gastro",
+      "title_ru": "Кровь в стуле",
+      "path": "backend/app/knowledge/scenario_packs/gastro/blood_in_stool.json"
+    },
+    {
+      "id": "gastro_constipation",
+      "category": "gastro",
+      "title_ru": "Запор",
+      "path": "backend/app/knowledge/scenario_packs/gastro/constipation.json"
+    },
+    {
+      "id": "gastro_diarrhea_acute",
+      "category": "gastro",
+      "title_ru": "Острая диарея",
+      "path": "backend/app/knowledge/scenario_packs/gastro/diarrhea_acute.json"
+    },
+    {
+      "id": "gastro_diffuse_abdominal_pain",
+      "category": "gastro",
+      "title_ru": "Разлитая боль в животе",
+      "path": "backend/app/knowledge/scenario_packs/gastro/diffuse_abdominal_pain.json"
+    },
+    {
+      "id": "gastro_epigastric_burning",
+      "category": "gastro",
+      "title_ru": "Жжение в желудке",
+      "path": "backend/app/knowledge/scenario_packs/gastro/epigastric_burning.json"
+    },
+    {
+      "id": "gastro_food_poisoning_like",
+      "category": "gastro",
+      "title_ru": "Подозрение на пищевое отравление",
+      "path": "backend/app/knowledge/scenario_packs/gastro/food_poisoning_like.json"
+    },
+    {
+      "id": "gastro_gastroenteritis_like",
+      "category": "gastro",
+      "title_ru": "Боль в животе и диарея",
+      "path": "backend/app/knowledge/scenario_packs/gastro/gastroenteritis_like.json"
+    },
+    {
+      "id": "gastro_heartburn_after_meal",
+      "category": "gastro",
+      "title_ru": "Изжога после еды",
+      "path": "backend/app/knowledge/scenario_packs/gastro/heartburn_after_meal.json"
+    },
+    {
+      "id": "gastro_ibs_like",
+      "category": "gastro",
+      "title_ru": "Боль в животе с нестабильным стулом",
+      "path": "backend/app/knowledge/scenario_packs/gastro/ibs_like.json"
+    },
+    {
+      "id": "gastro_nausea_vomiting",
+      "category": "gastro",
+      "title_ru": "Тошнота и рвота",
+      "path": "backend/app/knowledge/scenario_packs/gastro/nausea_vomiting.json"
+    },
+    {
+      "id": "gastro_right_lower_quadrant_pain",
+      "category": "gastro",
+      "title_ru": "Боль справа внизу живота",
+      "path": "backend/app/knowledge/scenario_packs/gastro/right_lower_quadrant_pain.json"
+    },
+    {
+      "id": "gastro_right_upper_quadrant_pain",
+      "category": "gastro",
+      "title_ru": "Боль справа под ребрами",
+      "path": "backend/app/knowledge/scenario_packs/gastro/right_upper_quadrant_pain.json"
+    },
+    {
+      "id": "gastro_vomiting_dehydration_risk",
+      "category": "gastro",
+      "title_ru": "Рвота и риск обезвоживания",
+      "path": "backend/app/knowledge/scenario_packs/gastro/vomiting_dehydration_risk.json"
+    },
+    {
+      "id": "neuro_back_pain_numbness",
+      "category": "neuro",
+      "title_ru": "Боль в спине и онемение",
+      "path": "backend/app/knowledge/scenario_packs/neuro/back_pain_numbness.json"
+    },
+    {
+      "id": "neuro_balance_problem",
+      "category": "neuro",
+      "title_ru": "Проблемы с равновесием",
+      "path": "backend/app/knowledge/scenario_packs/neuro/balance_problem.json"
+    },
+    {
+      "id": "neuro_dizziness_vertigo",
+      "category": "neuro",
+      "title_ru": "Головокружение с ощущением вращения",
+      "path": "backend/app/knowledge/scenario_packs/neuro/dizziness_vertigo.json"
+    },
+    {
+      "id": "neuro_facial_pain",
+      "category": "neuro",
+      "title_ru": "Боль по ходу лица",
+      "path": "backend/app/knowledge/scenario_packs/neuro/facial_pain.json"
+    },
+    {
+      "id": "neuro_headache_fever",
+      "category": "neuro",
+      "title_ru": "Головная боль и температура",
+      "path": "backend/app/knowledge/scenario_packs/neuro/headache_fever.json"
+    },
+    {
+      "id": "neuro_headache_high_bp",
+      "category": "neuro",
+      "title_ru": "Головная боль при высоком давлении",
+      "path": "backend/app/knowledge/scenario_packs/neuro/headache_high_bp.json"
+    },
+    {
+      "id": "neuro_memory_confusion",
+      "category": "neuro",
+      "title_ru": "Спутанность или ухудшение памяти",
+      "path": "backend/app/knowledge/scenario_packs/neuro/memory_confusion.json"
+    },
+    {
+      "id": "neuro_migraine_like",
+      "category": "neuro",
+      "title_ru": "Мигренеподобная головная боль",
+      "path": "backend/app/knowledge/scenario_packs/neuro/migraine_like.json"
+    },
+    {
+      "id": "neuro_neuropathy_feet",
+      "category": "neuro",
+      "title_ru": "Жжение или покалывание в стопах",
+      "path": "backend/app/knowledge/scenario_packs/neuro/neuropathy_feet.json"
+    },
+    {
+      "id": "neuro_numb_arm_face",
+      "category": "neuro",
+      "title_ru": "Онемение руки или лица",
+      "path": "backend/app/knowledge/scenario_packs/neuro/numb_arm_face.json"
+    },
+    {
+      "id": "neuro_seizure_like",
+      "category": "neuro",
+      "title_ru": "Судорожный эпизод",
+      "path": "backend/app/knowledge/scenario_packs/neuro/seizure_like.json"
+    },
+    {
+      "id": "neuro_sudden_worst_headache",
+      "category": "neuro",
+      "title_ru": "Внезапная сильнейшая головная боль",
+      "path": "backend/app/knowledge/scenario_packs/neuro/sudden_worst_headache.json"
+    },
+    {
+      "id": "neuro_tension_headache",
+      "category": "neuro",
+      "title_ru": "Сжимающая головная боль",
+      "path": "backend/app/knowledge/scenario_packs/neuro/tension_headache.json"
+    },
+    {
+      "id": "neuro_tremor",
+      "category": "neuro",
+      "title_ru": "Дрожание рук",
+      "path": "backend/app/knowledge/scenario_packs/neuro/tremor.json"
+    },
+    {
+      "id": "neuro_vision_aura",
+      "category": "neuro",
+      "title_ru": "Мушки или аура перед глазами",
+      "path": "backend/app/knowledge/scenario_packs/neuro/vision_aura.json"
+    },
+    {
+      "id": "neuro_weakness_one_side",
+      "category": "neuro",
+      "title_ru": "Слабость в одной половине тела",
+      "path": "backend/app/knowledge/scenario_packs/neuro/weakness_one_side.json"
+    },
+    {
+      "id": "oral_cavity_angular_cheilitis",
+      "category": "oral_cavity",
+      "title_ru": "Заеды в уголках рта",
+      "path": "backend/app/knowledge/scenario_packs/oral_cavity/angular_cheilitis.json"
+    },
+    {
+      "id": "oral_cavity_bad_breath_persistent",
+      "category": "oral_cavity",
+      "title_ru": "Стойкий неприятный запах изо рта",
+      "path": "backend/app/knowledge/scenario_packs/oral_cavity/bad_breath_persistent.json"
+    },
+    {
+      "id": "oral_cavity_dry_mouth",
+      "category": "oral_cavity",
+      "title_ru": "Сухость во рту",
+      "path": "backend/app/knowledge/scenario_packs/oral_cavity/dry_mouth.json"
+    },
+    {
+      "id": "oral_cavity_facial_swelling_dental",
+      "category": "oral_cavity",
+      "title_ru": "Отек лица на фоне зубной боли",
+      "path": "backend/app/knowledge/scenario_packs/oral_cavity/facial_swelling_dental.json"
+    },
+    {
+      "id": "oral_cavity_gum_abscess_like",
+      "category": "oral_cavity",
+      "title_ru": "Подозрение на абсцесс десны",
+      "path": "backend/app/knowledge/scenario_packs/oral_cavity/gum_abscess_like.json"
+    },
+    {
+      "id": "oral_cavity_gum_bleeding",
+      "category": "oral_cavity",
+      "title_ru": "Кровоточивость десен",
+      "path": "backend/app/knowledge/scenario_packs/oral_cavity/gum_bleeding.json"
+    },
+    {
+      "id": "oral_cavity_jaw_pain_tmj",
+      "category": "oral_cavity",
+      "title_ru": "Боль в челюсти и щелчки",
+      "path": "backend/app/knowledge/scenario_packs/oral_cavity/jaw_pain_tmj.json"
+    },
+    {
+      "id": "oral_cavity_multiple_mouth_ulcers",
+      "category": "oral_cavity",
+      "title_ru": "Несколько язвочек во рту",
+      "path": "backend/app/knowledge/scenario_packs/oral_cavity/multiple_mouth_ulcers.json"
+    },
+    {
+      "id": "oral_cavity_oral_thrush_like",
+      "category": "oral_cavity",
+      "title_ru": "Белый налет и кандидоз полости рта",
+      "path": "backend/app/knowledge/scenario_packs/oral_cavity/oral_thrush_like.json"
+    },
+    {
+      "id": "oral_cavity_oral_trauma",
+      "category": "oral_cavity",
+      "title_ru": "Травма слизистой рта",
+      "path": "backend/app/knowledge/scenario_packs/oral_cavity/oral_trauma.json"
+    },
+    {
+      "id": "oral_cavity_oral_white_patch",
+      "category": "oral_cavity",
+      "title_ru": "Белое пятно или налет во рту",
+      "path": "backend/app/knowledge/scenario_packs/oral_cavity/oral_white_patch.json"
+    },
+    {
+      "id": "oral_cavity_painful_swallowing_oral",
+      "category": "oral_cavity",
+      "title_ru": "Больно глотать на фоне проблемы во рту",
+      "path": "backend/app/knowledge/scenario_packs/oral_cavity/painful_swallowing_oral.json"
+    },
+    {
+      "id": "oral_cavity_post_extraction_bleeding",
+      "category": "oral_cavity",
+      "title_ru": "Кровотечение после удаления зуба",
+      "path": "backend/app/knowledge/scenario_packs/oral_cavity/post_extraction_bleeding.json"
+    },
+    {
+      "id": "oral_cavity_post_extraction_pain",
+      "category": "oral_cavity",
+      "title_ru": "Боль после удаления зуба",
+      "path": "backend/app/knowledge/scenario_packs/oral_cavity/post_extraction_pain.json"
+    },
+    {
+      "id": "oral_cavity_single_mouth_ulcer",
+      "category": "oral_cavity",
+      "title_ru": "Одна язвочка во рту",
+      "path": "backend/app/knowledge/scenario_packs/oral_cavity/single_mouth_ulcer.json"
+    },
+    {
+      "id": "oral_cavity_tongue_burning",
+      "category": "oral_cavity",
+      "title_ru": "Жжение или боль языка",
+      "path": "backend/app/knowledge/scenario_packs/oral_cavity/tongue_burning.json"
+    },
+    {
+      "id": "oral_cavity_tooth_pain_cold_hot",
+      "category": "oral_cavity",
+      "title_ru": "Зуб реагирует на холодное или горячее",
+      "path": "backend/app/knowledge/scenario_packs/oral_cavity/tooth_pain_cold_hot.json"
+    },
+    {
+      "id": "oral_cavity_tooth_pain_swelling",
+      "category": "oral_cavity",
+      "title_ru": "Зубная боль и отек десны или щеки",
+      "path": "backend/app/knowledge/scenario_packs/oral_cavity/tooth_pain_swelling.json"
+    },
+    {
+      "id": "oral_toothache_swelling",
+      "category": "oral_cavity",
+      "title_ru": "зубная боль",
+      "path": "backend/app/knowledge/scenario_packs/oral_cavity/toothache_swelling.json"
+    },
+    {
+      "id": "oral_cavity_trismus_dental",
+      "category": "oral_cavity",
+      "title_ru": "Трудно открыть рот из-за зуба или десны",
+      "path": "backend/app/knowledge/scenario_packs/oral_cavity/trismus_dental.json"
+    },
+    {
+      "id": "oral_cavity_wisdom_tooth_inflammation",
+      "category": "oral_cavity",
+      "title_ru": "Воспаление зуба мудрости",
+      "path": "backend/app/knowledge/scenario_packs/oral_cavity/wisdom_tooth_inflammation.json"
+    },
+    {
+      "id": "orthopedics_ankle_twist",
+      "category": "orthopedics",
+      "title_ru": "Голеностоп после подворачивания",
+      "path": "backend/app/knowledge/scenario_packs/orthopedics/ankle_twist.json"
+    },
+    {
+      "id": "orthopedics_back_after_lifting",
+      "category": "orthopedics",
+      "title_ru": "Спина после подъема тяжести",
+      "path": "backend/app/knowledge/scenario_packs/orthopedics/back_after_lifting.json"
+    },
+    {
+      "id": "orthopedics_back_pain_leg_radiation",
+      "category": "orthopedics",
+      "title_ru": "Поясница с отдачей в ногу",
+      "path": "backend/app/knowledge/scenario_packs/orthopedics/back_pain_leg_radiation.json"
+    },
+    {
+      "id": "orthopedics_calf_pain_swelling",
+      "category": "orthopedics",
+      "title_ru": "Боль и отек голени",
+      "path": "backend/app/knowledge/scenario_packs/orthopedics/calf_pain_swelling.json"
+    },
+    {
+      "id": "orthopedics_elbow_repetitive",
+      "category": "orthopedics",
+      "title_ru": "Боль в локте от повторных движений",
+      "path": "backend/app/knowledge/scenario_packs/orthopedics/elbow_repetitive.json"
+    },
+    {
+      "id": "orthopedics_finger_injury",
+      "category": "orthopedics",
+      "title_ru": "Травма пальца",
+      "path": "backend/app/knowledge/scenario_packs/orthopedics/finger_injury.json"
+    },
+    {
+      "id": "orthopedics_foot_pain_morning",
+      "category": "orthopedics",
+      "title_ru": "Боль в стопе утром",
+      "path": "backend/app/knowledge/scenario_packs/orthopedics/foot_pain_morning.json"
+    },
+    {
+      "id": "orthopedics_hip_pain_walking",
+      "category": "orthopedics",
+      "title_ru": "Боль в бедре при ходьбе",
+      "path": "backend/app/knowledge/scenario_packs/orthopedics/hip_pain_walking.json"
+    },
+    {
+      "id": "orthopedics_joint_hot_swollen",
+      "category": "orthopedics",
+      "title_ru": "Сустав горячий и отечный",
+      "path": "backend/app/knowledge/scenario_packs/orthopedics/joint_hot_swollen.json"
+    },
+    {
+      "id": "orthopedics_knee_after_exercise",
+      "category": "orthopedics",
+      "title_ru": "Колено болит после тренировки",
+      "path": "backend/app/knowledge/scenario_packs/orthopedics/knee_after_exercise.json"
+    },
+    {
+      "id": "orthopedics_knee_after_fall",
+      "category": "orthopedics",
+      "title_ru": "Колено болит после падения",
+      "path": "backend/app/knowledge/scenario_packs/orthopedics/knee_after_fall.json"
+    },
+    {
+      "id": "orthopedics_knee_twist",
+      "category": "orthopedics",
+      "title_ru": "Колено болит после скручивания",
+      "path": "backend/app/knowledge/scenario_packs/orthopedics/knee_twist.json"
+    },
+    {
+      "id": "orthopedics_muscle_strain",
+      "category": "orthopedics",
+      "title_ru": "Мышечная боль после растяжения",
+      "path": "backend/app/knowledge/scenario_packs/orthopedics/muscle_strain.json"
+    },
+    {
+      "id": "orthopedics_neck_after_sleep",
+      "category": "orthopedics",
+      "title_ru": "Шея после сна",
+      "path": "backend/app/knowledge/scenario_packs/orthopedics/neck_after_sleep.json"
+    },
+    {
+      "id": "orthopedics_rib_pain_after_cough",
+      "category": "orthopedics",
+      "title_ru": "Боль в ребрах после кашля",
+      "path": "backend/app/knowledge/scenario_packs/orthopedics/rib_pain_after_cough.json"
+    },
+    {
+      "id": "orthopedics_shoulder_after_overhead",
+      "category": "orthopedics",
+      "title_ru": "Плечо после нагрузки вверх",
+      "path": "backend/app/knowledge/scenario_packs/orthopedics/shoulder_after_overhead.json"
+    },
+    {
+      "id": "orthopedics_wrist_after_fall",
+      "category": "orthopedics",
+      "title_ru": "Запястье после падения",
+      "path": "backend/app/knowledge/scenario_packs/orthopedics/wrist_after_fall.json"
+    },
+    {
+      "id": "pediatric_abdominal_pain_child_rlq",
+      "category": "pediatric",
+      "title_ru": "Боль в животе справа внизу у ребенка",
+      "path": "backend/app/knowledge/scenario_packs/pediatric/abdominal_pain_child_rlq.json"
+    },
+    {
+      "id": "pediatric_bark_cough_croup",
+      "category": "pediatric",
+      "title_ru": "Лающий кашель у ребенка",
+      "path": "backend/app/knowledge/scenario_packs/pediatric/bark_cough_croup.json"
+    },
+    {
+      "id": "pediatric_constipation_child",
+      "category": "pediatric",
+      "title_ru": "Запор у ребенка",
+      "path": "backend/app/knowledge/scenario_packs/pediatric/constipation_child.json"
+    },
+    {
+      "id": "pediatric_diarrhea_child",
+      "category": "pediatric",
+      "title_ru": "Диарея у ребенка",
+      "path": "backend/app/knowledge/scenario_packs/pediatric/diarrhea_child.json"
+    },
+    {
+      "id": "pediatric_ear_pain_child_night",
+      "category": "pediatric",
+      "title_ru": "Боль в ухе ночью у ребенка",
+      "path": "backend/app/knowledge/scenario_packs/pediatric/ear_pain_child_night.json"
+    },
+    {
+      "id": "pediatric_enuresis_child",
+      "category": "pediatric",
+      "title_ru": "Ночное недержание мочи",
+      "path": "backend/app/knowledge/scenario_packs/pediatric/enuresis_child.json"
+    },
+    {
+      "id": "pediatric_fever_child_no_focus",
+      "category": "pediatric",
+      "title_ru": "Температура у ребенка без явного очага",
+      "path": "backend/app/knowledge/scenario_packs/pediatric/fever_child_no_focus.json"
+    },
+    {
+      "id": "pediatric_fever_infant_under3m",
+      "category": "pediatric",
+      "title_ru": "Температура у младенца до 3 месяцев",
+      "path": "backend/app/knowledge/scenario_packs/pediatric/fever_infant_under3m.json"
+    },
+    {
+      "id": "pediatric_headache_child_red_flags",
+      "category": "pediatric",
+      "title_ru": "Головная боль у ребенка с тревожными признаками",
+      "path": "backend/app/knowledge/scenario_packs/pediatric/headache_child_red_flags.json"
+    },
+    {
+      "id": "pediatric_poor_weight_gain",
+      "category": "pediatric",
+      "title_ru": "Плохая прибавка веса",
+      "path": "backend/app/knowledge/scenario_packs/pediatric/poor_weight_gain.json"
+    },
+    {
+      "id": "pediatric_rash_fever_child",
+      "category": "pediatric",
+      "title_ru": "Сыпь и температура у ребенка",
+      "path": "backend/app/knowledge/scenario_packs/pediatric/rash_fever_child.json"
+    },
+    {
+      "id": "pediatric_seizure_febrile",
+      "category": "pediatric",
+      "title_ru": "Судороги на фоне температуры",
+      "path": "backend/app/knowledge/scenario_packs/pediatric/seizure_febrile.json"
+    },
+    {
+      "id": "pediatric_sore_throat_child",
+      "category": "pediatric",
+      "title_ru": "Боль в горле у ребенка",
+      "path": "backend/app/knowledge/scenario_packs/pediatric/sore_throat_child.json"
+    },
+    {
+      "id": "pediatric_vomiting_child_dehydration",
+      "category": "pediatric",
+      "title_ru": "Рвота у ребенка и риск обезвоживания",
+      "path": "backend/app/knowledge/scenario_packs/pediatric/vomiting_child_dehydration.json"
+    },
+    {
+      "id": "pediatric_wheeze_child",
+      "category": "pediatric",
+      "title_ru": "Свистящее дыхание у ребенка",
+      "path": "backend/app/knowledge/scenario_packs/pediatric/wheeze_child.json"
+    },
+    {
+      "id": "respiratory_breath_pain",
+      "category": "respiratory",
+      "title_ru": "Боль при дыхании",
+      "path": "backend/app/knowledge/scenario_packs/respiratory/breath_pain.json"
+    },
+    {
+      "id": "respiratory_childlike_croup",
+      "category": "respiratory",
+      "title_ru": "Лающий кашель",
+      "path": "backend/app/knowledge/scenario_packs/respiratory/childlike_croup.json"
+    },
+    {
+      "id": "respiratory_common_cold",
+      "category": "respiratory",
+      "title_ru": "Насморк и простуда",
+      "path": "backend/app/knowledge/scenario_packs/respiratory/common_cold.json"
+    },
+    {
+      "id": "respiratory_cough_shortness_breath",
+      "category": "respiratory",
+      "title_ru": "Кашель и одышка",
+      "path": "backend/app/knowledge/scenario_packs/respiratory/cough_shortness_breath.json"
+    },
+    {
+      "id": "respiratory_dry_cough_no_fever",
+      "category": "respiratory",
+      "title_ru": "Сухой кашель без температуры",
+      "path": "backend/app/knowledge/scenario_packs/respiratory/dry_cough_no_fever.json"
+    },
+    {
+      "id": "respiratory_ear_pain_after_cold",
+      "category": "respiratory",
+      "title_ru": "Боль в ухе после простуды",
+      "path": "backend/app/knowledge/scenario_packs/respiratory/ear_pain_after_cold.json"
+    },
+    {
+      "id": "respiratory_fever_chills_bodyache",
+      "category": "respiratory",
+      "title_ru": "Температура, озноб и ломота",
+      "path": "backend/app/knowledge/scenario_packs/respiratory/fever_chills_bodyache.json"
+    },
+    {
+      "id": "respiratory_loss_smell_taste",
+      "category": "respiratory",
+      "title_ru": "Потеря обоняния или вкуса",
+      "path": "backend/app/knowledge/scenario_packs/respiratory/loss_smell_taste.json"
+    },
+    {
+      "id": "respiratory_nasal_allergy",
+      "category": "respiratory",
+      "title_ru": "Чихание и заложенность без температуры",
+      "path": "backend/app/knowledge/scenario_packs/respiratory/nasal_allergy.json"
+    },
+    {
+      "id": "respiratory_night_cough",
+      "category": "respiratory",
+      "title_ru": "Ночной кашель",
+      "path": "backend/app/knowledge/scenario_packs/respiratory/night_cough.json"
+    },
+    {
+      "id": "respiratory_persistent_cough",
+      "category": "respiratory",
+      "title_ru": "Затяжной кашель",
+      "path": "backend/app/knowledge/scenario_packs/respiratory/persistent_cough.json"
+    },
+    {
+      "id": "respiratory_productive_cough_fever",
+      "category": "respiratory",
+      "title_ru": "Влажный кашель и температура",
+      "path": "backend/app/knowledge/scenario_packs/respiratory/productive_cough_fever.json"
+    },
+    {
+      "id": "respiratory_sinus_pressure",
+      "category": "respiratory",
+      "title_ru": "Насморк и боль в пазухах",
+      "path": "backend/app/knowledge/scenario_packs/respiratory/sinus_pressure.json"
+    },
+    {
+      "id": "respiratory_sore_throat_fever",
+      "category": "respiratory",
+      "title_ru": "Боль в горле и температура",
+      "path": "backend/app/knowledge/scenario_packs/respiratory/sore_throat_fever.json"
+    },
+    {
+      "id": "respiratory_sore_throat_no_fever",
+      "category": "respiratory",
+      "title_ru": "Боль в горле без температуры",
+      "path": "backend/app/knowledge/scenario_packs/respiratory/sore_throat_no_fever.json"
+    },
+    {
+      "id": "respiratory_wheezing_after_trigger",
+      "category": "respiratory",
+      "title_ru": "Свистящее дыхание после триггера",
+      "path": "backend/app/knowledge/scenario_packs/respiratory/wheezing_after_trigger.json"
+    },
+    {
+      "id": "urinary_blood_in_urine",
+      "category": "urinary",
+      "title_ru": "Кровь в моче",
+      "path": "backend/app/knowledge/scenario_packs/urinary/blood_in_urine.json"
+    },
+    {
+      "id": "urinary_discharge_with_urination",
+      "category": "urinary",
+      "title_ru": "Выделения и жжение",
+      "path": "backend/app/knowledge/scenario_packs/urinary/discharge_with_urination.json"
+    },
+    {
+      "id": "urinary_edema_less_urine",
+      "category": "urinary",
+      "title_ru": "Отеки и меньше мочи",
+      "path": "backend/app/knowledge/scenario_packs/urinary/edema_less_urine.json"
+    },
+    {
+      "id": "urinary_female_urgency",
+      "category": "urinary",
+      "title_ru": "Срочные позывы",
+      "path": "backend/app/knowledge/scenario_packs/urinary/female_urgency.json"
+    },
+    {
+      "id": "urinary_fever_shaking_urinary",
+      "category": "urinary",
+      "title_ru": "Озноб и мочевые симптомы",
+      "path": "backend/app/knowledge/scenario_packs/urinary/fever_shaking_urinary.json"
+    },
+    {
+      "id": "urinary_flank_pain_fever",
+      "category": "urinary",
+      "title_ru": "Боль в пояснице и температура",
+      "path": "backend/app/knowledge/scenario_packs/urinary/flank_pain_fever.json"
+    },
+    {
+      "id": "urinary_foamy_urine",
+      "category": "urinary",
+      "title_ru": "Пенистая моча",
+      "path": "backend/app/knowledge/scenario_packs/urinary/foamy_urine.json"
+    },
+    {
+      "id": "urinary_frequent_urination",
+      "category": "urinary",
+      "title_ru": "Частые позывы к мочеиспусканию",
+      "path": "backend/app/knowledge/scenario_packs/urinary/frequent_urination.json"
+    },
+    {
+      "id": "urinary_genital_ulcer_warning",
+      "category": "urinary",
+      "title_ru": "Язвочка в интимной зоне",
+      "path": "backend/app/knowledge/scenario_packs/urinary/genital_ulcer_warning.json"
+    },
+    {
+      "id": "urinary_male_stream_weak",
+      "category": "urinary",
+      "title_ru": "Слабая струя мочи",
+      "path": "backend/app/knowledge/scenario_packs/urinary/male_stream_weak.json"
+    },
+    {
+      "id": "urinary_night_urination",
+      "category": "urinary",
+      "title_ru": "Частое мочеиспускание ночью",
+      "path": "backend/app/knowledge/scenario_packs/urinary/night_urination.json"
+    },
+    {
+      "id": "urinary_painful_urination",
+      "category": "urinary",
+      "title_ru": "Боль при мочеиспускании",
+      "path": "backend/app/knowledge/scenario_packs/urinary/painful_urination.json"
+    },
+    {
+      "id": "urinary_post_intimacy_cystitis",
+      "category": "urinary",
+      "title_ru": "Жжение после интимной близости",
+      "path": "backend/app/knowledge/scenario_packs/urinary/post_intimacy_cystitis.json"
+    },
+    {
+      "id": "urinary_pregnancy_urinary",
+      "category": "urinary",
+      "title_ru": "Мочевые симптомы при беременности",
+      "path": "backend/app/knowledge/scenario_packs/urinary/pregnancy_urinary.json"
+    },
+    {
+      "id": "urinary_renal_colic_like",
+      "category": "urinary",
+      "title_ru": "Приступ сильной боли в боку",
+      "path": "backend/app/knowledge/scenario_packs/urinary/renal_colic_like.json"
+    },
+    {
+      "id": "urinary_urinary_retention",
+      "category": "urinary",
+      "title_ru": "Не получается помочиться",
+      "path": "backend/app/knowledge/scenario_packs/urinary/urinary_retention.json"
+    },
+    {
+      "id": "women_health_breast_lump_new",
+      "category": "women_health",
+      "title_ru": "Новое уплотнение в груди",
+      "path": "backend/app/knowledge/scenario_packs/women_health/breast_lump_new.json"
+    },
+    {
+      "id": "women_health_breast_pain_lactation",
+      "category": "women_health",
+      "title_ru": "Боль в груди при лактации",
+      "path": "backend/app/knowledge/scenario_packs/women_health/breast_pain_lactation.json"
+    },
+    {
+      "id": "women_health_cycle_irregularity",
+      "category": "women_health",
+      "title_ru": "Нерегулярный цикл",
+      "path": "backend/app/knowledge/scenario_packs/women_health/cycle_irregularity.json"
+    },
+    {
+      "id": "women_health_early_pregnancy_nausea",
+      "category": "women_health",
+      "title_ru": "Тошнота при ранней беременности",
+      "path": "backend/app/knowledge/scenario_packs/women_health/early_pregnancy_nausea.json"
+    },
+    {
+      "id": "women_health_heavy_period_bleeding",
+      "category": "women_health",
+      "title_ru": "Обильные месячные",
+      "path": "backend/app/knowledge/scenario_packs/women_health/heavy_period_bleeding.json"
+    },
+    {
+      "id": "women_health_menopause_hot_flush",
+      "category": "women_health",
+      "title_ru": "Приливы в менопаузе",
+      "path": "backend/app/knowledge/scenario_packs/women_health/menopause_hot_flush.json"
+    },
+    {
+      "id": "women_health_ovulation_pain",
+      "category": "women_health",
+      "title_ru": "Боль в середине цикла",
+      "path": "backend/app/knowledge/scenario_packs/women_health/ovulation_pain.json"
+    },
+    {
+      "id": "women_health_painful_periods",
+      "category": "women_health",
+      "title_ru": "Болезненные месячные",
+      "path": "backend/app/knowledge/scenario_packs/women_health/painful_periods.json"
+    },
+    {
+      "id": "women_health_pelvic_pain_fever",
+      "category": "women_health",
+      "title_ru": "Боль внизу живота и температура",
+      "path": "backend/app/knowledge/scenario_packs/women_health/pelvic_pain_fever.json"
+    },
+    {
+      "id": "women_health_pms_severe",
+      "category": "women_health",
+      "title_ru": "Тяжелый ПМС",
+      "path": "backend/app/knowledge/scenario_packs/women_health/pms_severe.json"
+    },
+    {
+      "id": "women_health_postpartum_bleeding_warning",
+      "category": "women_health",
+      "title_ru": "Кровотечение после родов",
+      "path": "backend/app/knowledge/scenario_packs/women_health/postpartum_bleeding_warning.json"
+    },
+    {
+      "id": "women_health_postpartum_fever",
+      "category": "women_health",
+      "title_ru": "Температура после родов",
+      "path": "backend/app/knowledge/scenario_packs/women_health/postpartum_fever.json"
+    },
+    {
+      "id": "women_health_pregnancy_bleeding_warning",
+      "category": "women_health",
+      "title_ru": "Кровянистые выделения при беременности",
+      "path": "backend/app/knowledge/scenario_packs/women_health/pregnancy_bleeding_warning.json"
+    },
+    {
+      "id": "women_health_vaginal_discharge",
+      "category": "women_health",
+      "title_ru": "Необычные выделения",
+      "path": "backend/app/knowledge/scenario_packs/women_health/vaginal_discharge.json"
+    },
+    {
+      "id": "women_health_vaginal_itching",
+      "category": "women_health",
+      "title_ru": "Зуд в интимной зоне",
+      "path": "backend/app/knowledge/scenario_packs/women_health/vaginal_itching.json"
+    }
+  ]
+}

@@ -22,6 +22,7 @@
 - Web+Mobile release plan board: `docs/RELEASE_PLAN_WEB_MOBILE.md`
 - Day 1 execution pack: `docs/RELEASE_DAY1_ACTION_PACK.md`
 - Day 1 execution status: `docs/DAY1_EXECUTION_STATUS_2026-04-25.md`
+- Day 2 rerun status: `docs/DAY2_RERUN_STATUS_2026-04-25.md`
 - Mobile Day 1 release checklist: `docs/MOBILE_RELEASE_CHECKLIST_DAY1.md`
 - Investor demo checklist: `docs/INVESTOR_DEMO_CHECKLIST.md`
 - Investor deck skeleton: `docs/INVESTOR_DECK_SKELETON.md`

@@ -1,0 +1,41 @@
+{
+  "patch_name": "zazdorovie_knowledge_patch_2026-03-17",
+  "description": "SECONDARY indices — use only when no clear diagnosis or confidence < 0.6",
+  "indices": {
+    "NLR": {
+      "formula": "absolute_neutrophils / absolute_lymphocytes",
+      "scope": "systemic_inflammation_support",
+      "purpose": "support_inflammation_assessment"
+    },
+    "SII": {
+      "formula": "platelets * NLR",
+      "scope": "systemic_immune_inflammation",
+      "purpose": "systemic_immune_inflammation_support",
+      "bands": ["<335", "335-468", "468-655", ">655"]
+    },
+    "SIRI": {
+      "formula": "absolute_monocytes * NLR",
+      "scope": "systemic_inflammation_response",
+      "purpose": "systemic_inflammation_response_support",
+      "bands": ["<0.66", "0.66-0.98", "0.99-1.42", ">1.43"]
+    },
+    "AISI": {
+      "formula": "platelets * absolute_monocytes * NLR",
+      "equivalent": "platelets * SIRI",
+      "scope": "composite_systemic_inflammation",
+      "purpose": "composite_systemic_inflammation_support"
+    },
+    "ITI": {
+      "formula": "(free_T3 + free_T4) / TSH",
+      "scope": "thyroid_support_index",
+      "reference_interval": "7.04-27.21",
+      "purpose": "early_hypo_hyperthyroid_tendency_support"
+    }
+  },
+  "guardrails": [
+    "supportive only, not standalone diagnosis",
+    "do not map NLR/SII/SIRI/AISI to one disease without symptom support",
+    "prefer absolute counts when formula requires them",
+    "use only when no explicit diagnosis or confidence < 0.6"
+  ]
+}

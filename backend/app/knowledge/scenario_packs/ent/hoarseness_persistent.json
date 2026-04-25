@@ -1,0 +1,41 @@
+{
+  "id": "ent_hoarseness_persistent",
+  "category": "ent",
+  "title_ru": "Осиплость более 2 недель",
+  "version": "v1",
+  "chief_complaint_patterns": [
+    "осиплость голоса более двух недель"
+  ],
+  "body_regions": [
+    "larynx",
+    "ent"
+  ],
+  "must_ask": [
+    "Есть ли курение/перенапряжение голоса?",
+    "Есть ли боль при глотании?",
+    "Есть ли потеря веса?"
+  ],
+  "red_flags": [
+    "persistent_hoarseness_over_3_weeks",
+    "hemoptysis",
+    "weight_loss"
+  ],
+  "likely_hypotheses": [
+    "chronic_laryngitis_like",
+    "vocal_fold_nodule_like",
+    "neoplasm_rule_out"
+  ],
+  "possible_tests": [
+    "laryngoscopy"
+  ],
+  "self_care": [
+    "голосовой покой",
+    "увлажнение воздуха",
+    "плановый осмотр ЛОР"
+  ],
+  "care_path": {
+    "default": "planned_or_urgent_assessment_by_symptoms",
+    "if_red_flags": "urgent_or_emergency_assessment"
+  },
+  "notes": "Phase-2 scenario pack for pre-LLM ranking and triage. Requires clinical review before production use."
+}

@@ -1,0 +1,33 @@
+version: 1.0
+
+rules:
+  oxidative_stress:
+    trigger:
+      pyroglutamic_acid: high
+    sections:
+      - antioxidants
+      - detox_load_reduction
+
+  energy_metabolism:
+    trigger_any:
+      malonic_acid: high
+      sebacic_acid: high
+    sections:
+      - meal_timing
+      - calories
+      - fats
+
+  vitamin_cofactors:
+    trigger:
+      figlu: high
+    sections:
+      - vitamins_check
+      - vitamins_correction
+
+  external_load:
+    trigger_any:
+      hippuric: high
+      mandelic: high
+    sections:
+      - external_analysis
+      - detox_load_reduction

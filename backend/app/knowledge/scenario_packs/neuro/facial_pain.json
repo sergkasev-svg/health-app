@@ -1,0 +1,47 @@
+{
+  "id": "neuro_facial_pain",
+  "category": "neuro",
+  "title_ru": "Боль по ходу лица",
+  "version": "v1",
+  "chief_complaint_patterns": [
+    "боль по ходу лица"
+  ],
+  "body_regions": [
+    "head",
+    "brain",
+    "nerve"
+  ],
+  "must_ask": [
+    "Когда началось ухудшение?",
+    "Есть ли слабость, онемение или нарушение речи?",
+    "Есть ли температура или ригидность шеи?",
+    "Похожи ли симптомы на ваши прошлые эпизоды?"
+  ],
+  "red_flags": [
+    "stroke_signs",
+    "worst_headache",
+    "seizure",
+    "confusion",
+    "meningeal_signs"
+  ],
+  "likely_hypotheses": [
+    "migraine_or_tension_headache",
+    "vestibular_issue",
+    "acute_neurological_event_if_red_flags"
+  ],
+  "possible_tests": [
+    "neurological exam",
+    "blood pressure",
+    "urgent imaging if focal deficits"
+  ],
+  "self_care": [
+    "отдых",
+    "избегать вождения при выраженных симптомах",
+    "наблюдать за новыми неврологическими признаками"
+  ],
+  "care_path": {
+    "default": "planned_or_urgent_assessment_by_symptoms",
+    "if_red_flags": "urgent_or_emergency_assessment"
+  },
+  "notes": "Starter scenario pack for triage flow. Requires clinical review before production use."
+}

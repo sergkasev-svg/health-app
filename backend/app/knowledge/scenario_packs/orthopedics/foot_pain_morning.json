@@ -1,0 +1,48 @@
+{
+  "id": "orthopedics_foot_pain_morning",
+  "category": "orthopedics",
+  "title_ru": "Боль в стопе утром",
+  "version": "v1",
+  "chief_complaint_patterns": [
+    "боль в стопе утром"
+  ],
+  "body_regions": [
+    "joint",
+    "muscle",
+    "spine",
+    "limb"
+  ],
+  "must_ask": [
+    "Была ли травма, падение или резкое движение?",
+    "Есть ли отек или покраснение?",
+    "Можете ли вы опираться на конечность?",
+    "Что усиливает боль?"
+  ],
+  "red_flags": [
+    "gross_deformity",
+    "cannot_bear_weight",
+    "hot_swollen_joint_with_fever",
+    "progressive_numbness"
+  ],
+  "likely_hypotheses": [
+    "contusion_or_strain",
+    "ligament_or_meniscus_injury",
+    "inflammatory_joint_process_if_hot"
+  ],
+  "possible_tests": [
+    "clinical exam",
+    "X-ray if trauma",
+    "MRI if internal injury suspected"
+  ],
+  "self_care": [
+    "снизить нагрузку",
+    "холод 15–20 минут",
+    "не разрабатывать через боль",
+    "поднять конечность при отеке"
+  ],
+  "care_path": {
+    "default": "planned_or_urgent_assessment_by_symptoms",
+    "if_red_flags": "urgent_or_emergency_assessment"
+  },
+  "notes": "Starter scenario pack for triage flow. Requires clinical review before production use."
+}

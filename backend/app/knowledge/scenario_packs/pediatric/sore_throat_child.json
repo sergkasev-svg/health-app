@@ -1,0 +1,40 @@
+{
+  "id": "pediatric_sore_throat_child",
+  "category": "pediatric",
+  "title_ru": "Боль в горле у ребенка",
+  "version": "v1",
+  "chief_complaint_patterns": [
+    "у ребенка болит горло и трудно глотать"
+  ],
+  "body_regions": [
+    "throat",
+    "ent"
+  ],
+  "must_ask": [
+    "Есть ли температура?",
+    "Есть ли налеты на миндалинах?",
+    "Есть ли сыпь?"
+  ],
+  "red_flags": [
+    "drooling",
+    "stridor",
+    "severe_dehydration"
+  ],
+  "likely_hypotheses": [
+    "viral_pharyngitis_like",
+    "streptococcal_tonsillitis_like"
+  ],
+  "possible_tests": [
+    "rapid_strep_test_if_needed"
+  ],
+  "self_care": [
+    "теплое питье",
+    "щадящий режим",
+    "контроль дыхания и глотания"
+  ],
+  "care_path": {
+    "default": "planned_or_urgent_assessment_by_symptoms",
+    "if_red_flags": "urgent_or_emergency_assessment"
+  },
+  "notes": "Phase-2 scenario pack for pre-LLM ranking and triage. Requires clinical review before production use."
+}

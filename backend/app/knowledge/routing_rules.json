@@ -1,0 +1,341 @@
+{
+  "module": "routing_rules",
+  "version": "1.0",
+  "description": "Routing rules for unified food symptom triage in ZaZdorovie.",
+  "pipeline": [
+    "normalize_input",
+    "extract_symptoms",
+    "extract_food_triggers",
+    "extract_red_flags",
+    "detect_zone",
+    "detect_cluster",
+    "rank_causes",
+    "select_template",
+    "build_patient_safe_response"
+  ],
+  "normalization": {
+    "symptom_synonyms": {
+      "тошнота": ["мутит", "подташнивает", "тошнит"],
+      "слабость": ["ватное состояние", "разбитость", "нет сил"],
+      "головокружение": ["кружится голова", "дурнота"],
+      "изжога": ["жжение", "печет", "кислота"],
+      "вздутие": ["раздуло", "живот надулся", "распирает"],
+      "диарея": ["понос", "жидкий стул", "послабление"],
+      "боль справа под рёбрами": ["тянет справа", "болит справа вверху", "под правым ребром"],
+      "верх живота": ["эпигастрий", "под ложечкой", "верхняя часть живота"]
+    },
+    "trigger_synonyms": {
+      "fatty_fried": [
+        "жирное",
+        "жареное",
+        "семечки",
+        "орехи",
+        "фастфуд",
+        "шашлык",
+        "картофель фри"
+      ],
+      "dairy": [
+        "молоко",
+        "сливки",
+        "мороженое",
+        "творог",
+        "сырок",
+        "йогурт"
+      ],
+      "histamine_like": [
+        "вино",
+        "сыр",
+        "копчёности",
+        "колбасы",
+        "ферментированное",
+        "квашеное"
+      ],
+      "fodmap_like": [
+        "лук",
+        "чеснок",
+        "бобовые",
+        "фасоль",
+        "яблоки",
+        "груши",
+        "соки",
+        "мёд",
+        "сахарозаменители"
+      ],
+      "sweet_load": [
+        "сладкое",
+        "торт",
+        "десерт",
+        "шоколад",
+        "сладкий напиток",
+        "газировка"
+      ],
+      "alcohol": [
+        "вино",
+        "пиво",
+        "шампанское",
+        "алкоголь",
+        "коньяк",
+        "водка"
+      ]
+    }
+  },
+  "red_flag_rules": {
+    "match_any": [
+      "сильная боль",
+      "нарастающая боль",
+      "боль в груди",
+      "одышка",
+      "обморок",
+      "кровь в рвоте",
+      "кровь в стуле",
+      "чёрный стул",
+      "желтуха",
+      "температура",
+      "неукротимая рвота",
+      "не могу пить",
+      "редко мочусь",
+      "спутанность"
+    ],
+    "route": "urgent_general_route",
+    "output_mode": "urgent_only"
+  },
+  "zone_rules": [
+    {
+      "zone": "right_upper_abdominal_zone",
+      "if_any_symptoms": [
+        "боль справа под рёбрами",
+        "тяжесть справа под рёбрами",
+        "горечь во рту"
+      ]
+    },
+    {
+      "zone": "upper_gi_zone",
+      "if_any_symptoms": [
+        "верх живота",
+        "эпигастрий",
+        "тошнота",
+        "переполненность после еды",
+        "раннее насыщение",
+        "отрыжка",
+        "изжога"
+      ]
+    },
+    {
+      "zone": "bowel_zone",
+      "if_any_symptoms": [
+        "вздутие",
+        "урчание",
+        "газы",
+        "диарея",
+        "позывы после еды"
+      ]
+    },
+    {
+      "zone": "systemic_zone",
+      "if_any_symptoms": [
+        "слабость",
+        "головная боль",
+        "сонливость",
+        "головокружение",
+        "дурнота"
+      ]
+    }
+  ],
+  "cluster_rules": [
+    {
+      "cluster": "right_upper_abdominal_discomfort_after_fatty_food",
+      "requires_zone": "right_upper_abdominal_zone",
+      "requires_trigger_group": "fatty_fried"
+    },
+    {
+      "cluster": "heartburn_burning_regurgitation_after_food",
+      "requires_zone": "upper_gi_zone",
+      "requires_any_symptoms": ["изжога", "жжение", "кислая отрыжка", "хуже лёжа"]
+    },
+    {
+      "cluster": "upper_abdominal_heaviness_after_food",
+      "requires_zone": "upper_gi_zone",
+      "requires_any_symptoms": ["тяжесть", "переполненность", "тошнота"]
+    },
+    {
+      "cluster": "upper_abdominal_pain_with_nausea",
+      "requires_zone": "upper_gi_zone",
+      "requires_any_symptoms": ["боль", "тошнота"]
+    },
+    {
+      "cluster": "bloating_gas_diarrhea_after_dairy",
+      "requires_zone": "bowel_zone",
+      "requires_trigger_group": "dairy"
+    },
+    {
+      "cluster": "bloating_gas_after_onion_garlic_beans_fruit_juice_honey",
+      "requires_zone": "bowel_zone",
+      "requires_trigger_group": "fodmap_like"
+    },
+    {
+      "cluster": "recurrent_pain_plus_stool_change_plus_bloating",
+      "requires_zone": "bowel_zone",
+      "requires_any_symptoms": ["вздутие", "боль", "изменение стула"],
+      "requires_context_flags": ["recurrent_pattern"]
+    },
+    {
+      "cluster": "acute_diarrhea_plus_vomiting_plus_fever",
+      "requires_zone": "bowel_zone",
+      "requires_any_symptoms": ["диарея", "рвота", "температура"]
+    },
+    {
+      "cluster": "nausea_weakness_headache_after_fatty_food",
+      "requires_zone": "systemic_zone",
+      "requires_trigger_group": "fatty_fried"
+    },
+    {
+      "cluster": "sleepiness_weakness_after_heavy_meal",
+      "requires_zone": "systemic_zone",
+      "requires_any_symptoms": ["слабость", "сонливость", "дурнота"]
+    },
+    {
+      "cluster": "nausea_headache_after_wine_cheese_smoked_food",
+      "requires_zone": "systemic_zone",
+      "requires_trigger_group": "histamine_like"
+    }
+  ],
+  "cause_ranking_overrides": [
+    {
+      "if_trigger_group": "histamine_like",
+      "if_any_symptoms": ["покраснение", "сердцебиение", "зуд", "заложенность носа"],
+      "promote": ["histamine_conditional_pattern"]
+    },
+    {
+      "if_trigger_group": "sweet_load",
+      "if_any_symptoms": ["слабость", "дрожь", "потливость", "головокружение"],
+      "promote": ["sugar_glucose_pattern"]
+    },
+    {
+      "if_trigger_group": "fatty_fried",
+      "if_any_symptoms": ["боль справа под рёбрами", "горечь"],
+      "promote": ["biliary_pattern"]
+    },
+    {
+      "if_any_symptoms": ["боль в спину", "многократная рвота", "температура"],
+      "promote": ["pancreatic_warning_if_severe"],
+      "route_if_present": "urgent_general_route"
+    },
+    {
+      "if_any_symptoms": ["кровь в стуле", "чёрный стул", "кровь в рвоте"],
+      "route_if_present": "urgent_general_route"
+    }
+  ],
+  "template_selection_rules": [
+    {
+      "if_cluster": "upper_abdominal_heaviness_after_food",
+      "template": "upper_gi_mild"
+    },
+    {
+      "if_cluster": "upper_abdominal_pain_with_nausea",
+      "template": "upper_gi_mild"
+    },
+    {
+      "if_cluster": "right_upper_abdominal_discomfort_after_fatty_food",
+      "template": "biliary_like"
+    },
+    {
+      "if_cluster": "heartburn_burning_regurgitation_after_food",
+      "template": "reflux_like"
+    },
+    {
+      "if_cluster": "bloating_gas_diarrhea_after_dairy",
+      "template": "dairy_like"
+    },
+    {
+      "if_cluster": "bloating_gas_after_onion_garlic_beans_fruit_juice_honey",
+      "template": "bloating_bowel_like"
+    },
+    {
+      "if_cluster": "recurrent_pain_plus_stool_change_plus_bloating",
+      "template": "bloating_bowel_like"
+    },
+    {
+      "if_cluster": "acute_diarrhea_plus_vomiting_plus_fever",
+      "template": "infectious_like"
+    },
+    {
+      "if_cluster": "nausea_weakness_headache_after_fatty_food",
+      "template": "systemic_after_food"
+    },
+    {
+      "if_cluster": "sleepiness_weakness_after_heavy_meal",
+      "template": "systemic_after_food"
+    },
+    {
+      "if_cluster": "nausea_headache_after_wine_cheese_smoked_food",
+      "template": "systemic_after_food"
+    }
+  ],
+  "tests_rules": [
+    {
+      "if_recurrent": true,
+      "if_any_causes": [
+        "fatty_food_overload",
+        "biliary_pattern",
+        "pancreatic_warning_if_severe"
+      ],
+      "recommend": [
+        "АЛТ",
+        "АСТ",
+        "билирубин",
+        "ГГТ",
+        "амилаза",
+        "липаза",
+        "УЗИ органов брюшной полости"
+      ]
+    },
+    {
+      "if_recurrent": true,
+      "if_any_causes": [
+        "dairy_lactose_pattern"
+      ],
+      "recommend": [
+        "пищевой дневник",
+        "клиническая оценка непереносимости молочного"
+      ]
+    },
+    {
+      "if_recurrent": true,
+      "if_any_causes": [
+        "functional_dyspepsia",
+        "ulcer_or_gastritis_risk_pattern"
+      ],
+      "recommend": [
+        "обсуждение H. pylori",
+        "оценка НПВП и алкоголя"
+      ]
+    },
+    {
+      "if_recurrent": true,
+      "if_any_causes": [
+        "histamine_conditional_pattern"
+      ],
+      "recommend": [
+        "обсуждать только при типичной повторяемости"
+      ],
+      "avoid": [
+        "DAO всем подряд",
+        "гистамин в крови всем подряд",
+        "IgG-панели совместимости"
+      ]
+    }
+  ],
+  "output_rules": {
+    "default_sections": [
+      "что вероятнее всего",
+      "какие ещё причины возможны",
+      "что делать сейчас",
+      "когда срочно обращаться",
+      "нужны ли анализы, если повторяется"
+    ],
+    "urgent_sections_only": [
+      "почему это требует срочной оценки",
+      "что делать прямо сейчас"
+    ]
+  }
+}

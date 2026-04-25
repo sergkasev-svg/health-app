@@ -1,0 +1,41 @@
+{
+  "id": "ent_postnasal_drip_cough",
+  "category": "ent",
+  "title_ru": "Кашель из-за стекания слизи",
+  "version": "v1",
+  "chief_complaint_patterns": [
+    "кашель из-за стекания слизи по задней стенке"
+  ],
+  "body_regions": [
+    "nose",
+    "throat",
+    "ent"
+  ],
+  "must_ask": [
+    "Есть ли ночной кашель?",
+    "Есть ли изжога?",
+    "Есть ли аллергический фон?"
+  ],
+  "red_flags": [
+    "persistent_cough_with_dyspnea",
+    "hemoptysis"
+  ],
+  "likely_hypotheses": [
+    "postnasal_drip_syndrome_like",
+    "allergic_rhinitis_like",
+    "reflux_overlap"
+  ],
+  "possible_tests": [
+    "ent_exam"
+  ],
+  "self_care": [
+    "промывание носа",
+    "увлажнение воздуха",
+    "контроль триггеров"
+  ],
+  "care_path": {
+    "default": "planned_or_urgent_assessment_by_symptoms",
+    "if_red_flags": "urgent_or_emergency_assessment"
+  },
+  "notes": "Phase-2 scenario pack for pre-LLM ranking and triage. Requires clinical review before production use."
+}

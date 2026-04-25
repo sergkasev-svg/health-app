@@ -1,0 +1,46 @@
+{
+  "id": "urinary_female_urgency",
+  "category": "urinary",
+  "title_ru": "Срочные позывы",
+  "version": "v1",
+  "chief_complaint_patterns": [
+    "срочные позывы"
+  ],
+  "body_regions": [
+    "bladder",
+    "kidney",
+    "urinary"
+  ],
+  "must_ask": [
+    "Есть ли жжение или боль при мочеиспускании?",
+    "Есть ли температура или боль в пояснице?",
+    "Есть ли кровь в моче?",
+    "Как часто стали возникать позывы?"
+  ],
+  "red_flags": [
+    "urinary_retention",
+    "flank_pain_with_fever",
+    "visible_blood_clots",
+    "testicular_torsion_like"
+  ],
+  "likely_hypotheses": [
+    "cystitis_like",
+    "pyelonephritis_or_stone_risk",
+    "retention_or_obstruction_if_red_flags"
+  ],
+  "possible_tests": [
+    "urinalysis",
+    "urine culture if indicated",
+    "kidney ultrasound when appropriate"
+  ],
+  "self_care": [
+    "пить воду при отсутствии противопоказаний",
+    "не терпеть позывы",
+    "следить за температурой и болью в пояснице"
+  ],
+  "care_path": {
+    "default": "planned_or_urgent_assessment_by_symptoms",
+    "if_red_flags": "urgent_or_emergency_assessment"
+  },
+  "notes": "Starter scenario pack for triage flow. Requires clinical review before production use."
+}

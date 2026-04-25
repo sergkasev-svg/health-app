@@ -1,0 +1,41 @@
+{
+  "id": "women_health_painful_periods",
+  "category": "women_health",
+  "title_ru": "Болезненные месячные",
+  "version": "v1",
+  "chief_complaint_patterns": [
+    "сильная боль во время месячных"
+  ],
+  "body_regions": [
+    "pelvis"
+  ],
+  "must_ask": [
+    "Когда началась боль относительно цикла?",
+    "Боль снимается НПВП?",
+    "Есть ли тошнота или обморок?"
+  ],
+  "red_flags": [
+    "severe_uncontrolled_pain",
+    "syncope",
+    "persistent_vomiting"
+  ],
+  "likely_hypotheses": [
+    "primary_dysmenorrhea",
+    "endometriosis_like",
+    "adenomyosis_like"
+  ],
+  "possible_tests": [
+    "pelvic_ultrasound",
+    "CBC"
+  ],
+  "self_care": [
+    "тепло на низ живота",
+    "щадящий режим",
+    "контроль боли"
+  ],
+  "care_path": {
+    "default": "planned_or_urgent_assessment_by_symptoms",
+    "if_red_flags": "urgent_or_emergency_assessment"
+  },
+  "notes": "Phase-2 scenario pack for pre-LLM ranking and triage. Requires clinical review before production use."
+}

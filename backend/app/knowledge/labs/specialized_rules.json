@@ -1,0 +1,32 @@
+{
+  "patch_name": "zazdorovie_knowledge_patch_2026-03-17",
+  "description": "SPECIALIZED rules — narrow scope, hepatology only",
+  "alpha_1_antitrypsin": {
+    "scope": "hepatology",
+    "trigger_if_any": [
+      "prolonged_cholestatic_jaundice",
+      "unexplained_hyperbilirubinemia",
+      "recurrent_elevated_liver_enzymes",
+      "hepatomegaly",
+      "splenomegaly",
+      "cryptogenic_liver_disease"
+    ],
+    "rules": [
+      "Consider only in hepatology context",
+      "Order serum alpha-1 antitrypsin first",
+      "Phenotype/genotype if serum level is low",
+      "Do not trigger from isolated CBC abnormality"
+    ],
+    "avoid_trigger_if_only": [
+      "isolated_cbc_deviation",
+      "isolated_fatigue",
+      "isolated_eosinophilia"
+    ],
+    "next_tests": [
+      "serum_alpha1_antitrypsin",
+      "phenotype_or_genotype_if_serum_level_low",
+      "liver_panel",
+      "bilirubin_total_and_direct"
+    ]
+  }
+}

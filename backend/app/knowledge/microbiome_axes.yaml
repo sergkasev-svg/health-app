@@ -1,0 +1,96 @@
+version: 1.1
+
+axes:
+  gut_muscle:
+    title_ru: "Кишечник → мышцы"
+    trigger_terms:
+      - "слабость"
+      - "нет сил"
+      - "утомляемость"
+      - "снижение силы"
+      - "плохо восстанавливаюсь"
+      - "саркопения"
+    risk_inputs:
+      - age_over_50
+      - low_physical_activity
+      - protein_deficit_risk
+      - unintended_weight_loss
+      - fatigue
+    linked_entities:
+      - roseburia_inulinivorans
+    allowed_summary_ru:
+      - "есть данные о связи микробиома с мышечной функцией"
+      - "некоторые кишечные бактерии ассоциированы с более высокой мышечной силой"
+    forbidden_summary_ru:
+      - "микробиом вылечит саркопению"
+
+  gut_brain:
+    title_ru: "Кишечник → мозг"
+    trigger_terms:
+      - "тревога"
+      - "подавленность"
+      - "плохое настроение"
+      - "депрессия"
+      - "стресс"
+      - "раздражительность"
+      - "плохой сон"
+    risk_inputs:
+      - chronic_stress
+      - insomnia
+      - gi_symptoms
+      - ultra_processed_diet
+      - recent_antibiotics
+    linked_entities:
+      - bifidobacterium_longum_1714
+      - bifidobacterium_breve_ccfm1025
+      - lactobacillus_rhamnosus_jb1
+      - faecalibacterium_prausnitzii
+    allowed_summary_ru:
+      - "есть данные о связи кишечника и стресс-ответа"
+      - "ось кишечник-мозг активно изучается"
+    forbidden_summary_ru:
+      - "пробиотик лечит депрессию"
+
+  gut_immune:
+    title_ru: "Кишечник → иммунитет"
+    trigger_terms:
+      - "часто болею"
+      - "воспаление"
+      - "слабый иммунитет"
+      - "дискомфорт в животе"
+      - "после антибиотиков"
+    risk_inputs:
+      - recent_antibiotics
+      - low_fiber_diet
+      - recurrent_infections
+      - chronic_gi_symptoms
+    linked_entities:
+      - akkermansia_muciniphila
+      - faecalibacterium_prausnitzii
+    allowed_summary_ru:
+      - "здоровье кишечного барьера связано с иммунной регуляцией"
+      - "часть комменсальных бактерий связана с противовоспалительным профилем"
+    forbidden_summary_ru:
+      - "микробиом заменяет лечение иммунных заболеваний"
+
+  gut_skin:
+    title_ru: "Кишечник → кожа"
+    trigger_terms:
+      - "акне"
+      - "сыпь"
+      - "дерматит"
+      - "кожа"
+      - "обострения после еды"
+    risk_inputs:
+      - high_sugar_diet
+      - gi_symptoms
+      - suspected_dysbiosis
+      - inflammatory_pattern
+    linked_entities:
+      - akkermansia_muciniphila
+      - faecalibacterium_prausnitzii
+    allowed_summary_ru:
+      - "ось кишечник-кожа является перспективным направлением"
+      - "состав микробиома может быть связан с воспалительными кожными состояниями"
+    forbidden_summary_ru:
+      - "бактерия лечит акне или дерматит"

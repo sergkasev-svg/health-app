@@ -1,0 +1,45 @@
+{
+  "id": "allergy_skin_nasal_allergy_skin",
+  "category": "allergy_skin",
+  "title_ru": "Аллергия с насморком и зудом",
+  "version": "v1",
+  "chief_complaint_patterns": [
+    "аллергия с насморком и зудом"
+  ],
+  "body_regions": [
+    "skin",
+    "mucosa"
+  ],
+  "must_ask": [
+    "Что могло спровоцировать симптомы?",
+    "Есть ли зуд, отек или затруднение дыхания?",
+    "Есть ли температура или болезненность кожи?",
+    "Где именно расположена сыпь или реакция?"
+  ],
+  "red_flags": [
+    "anaphylaxis_signs",
+    "rapid_spreading_rash",
+    "lip_tongue_swelling",
+    "painful_skin_with_fever"
+  ],
+  "likely_hypotheses": [
+    "allergic_reaction",
+    "contact_dermatitis_or_eczema",
+    "infection_if_painful_and_hot"
+  ],
+  "possible_tests": [
+    "clinical exam",
+    "trigger review",
+    "CBC if infection suspected"
+  ],
+  "self_care": [
+    "избегать возможного триггера",
+    "не расчесывать",
+    "наблюдать за нарастанием отека или одышки"
+  ],
+  "care_path": {
+    "default": "planned_or_urgent_assessment_by_symptoms",
+    "if_red_flags": "urgent_or_emergency_assessment"
+  },
+  "notes": "Starter scenario pack for triage flow. Requires clinical review before production use."
+}

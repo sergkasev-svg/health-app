@@ -1,0 +1,50 @@
+{
+  "id": "oral_cavity_bad_breath_persistent",
+  "category": "oral_cavity",
+  "title_ru": "Стойкий неприятный запах изо рта",
+  "version": "v1",
+  "chief_complaint_patterns": [
+    "стойкий неприятный запах изо рта"
+  ],
+  "body_regions": [
+    "mouth",
+    "tooth",
+    "gum",
+    "jaw",
+    "tongue"
+  ],
+  "must_ask": [
+    "Есть ли отек десны, щеки или лица?",
+    "Есть ли температура?",
+    "Боль постоянная или только на горячее/холодное?",
+    "Трудно ли открывать рот или глотать?"
+  ],
+  "red_flags": [
+    "facial_swelling",
+    "trouble_swallowing",
+    "trismus_like",
+    "persistent_bleeding_after_extraction",
+    "fever_with_dental_pain"
+  ],
+  "likely_hypotheses": [
+    "pulpitis_or_caries_like",
+    "gum_infection_or_abscess",
+    "mucosal_or_tmj_issue_by_pattern"
+  ],
+  "possible_tests": [
+    "dental exam",
+    "dental X-ray when indicated",
+    "CBC if systemic symptoms"
+  ],
+  "self_care": [
+    "не греть область",
+    "осторожная гигиена полости рта",
+    "избегать очень горячего и холодного",
+    "не пытаться вскрывать или давить отек"
+  ],
+  "care_path": {
+    "default": "planned_or_urgent_assessment_by_symptoms",
+    "if_red_flags": "urgent_or_emergency_assessment"
+  },
+  "notes": "Starter scenario pack for triage flow. Requires clinical review before production use."
+}

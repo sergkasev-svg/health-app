@@ -1,0 +1,40 @@
+{
+  "id": "pediatric_ear_pain_child_night",
+  "category": "pediatric",
+  "title_ru": "Боль в ухе ночью у ребенка",
+  "version": "v1",
+  "chief_complaint_patterns": [
+    "у ребенка ночью болит ухо"
+  ],
+  "body_regions": [
+    "ear",
+    "ent"
+  ],
+  "must_ask": [
+    "Есть ли температура?",
+    "Был ли насморк перед этим?",
+    "Есть ли выделения из уха?"
+  ],
+  "red_flags": [
+    "mastoid_swelling",
+    "high_fever",
+    "persistent_severe_pain"
+  ],
+  "likely_hypotheses": [
+    "acute_otitis_media_like",
+    "otitis_externa_like"
+  ],
+  "possible_tests": [
+    "otoscopy"
+  ],
+  "self_care": [
+    "обезболивание по возрасту",
+    "контроль температуры",
+    "осмотр ЛОР/педиатра"
+  ],
+  "care_path": {
+    "default": "planned_or_urgent_assessment_by_symptoms",
+    "if_red_flags": "urgent_or_emergency_assessment"
+  },
+  "notes": "Phase-2 scenario pack for pre-LLM ranking and triage. Requires clinical review before production use."
+}

@@ -1,0 +1,41 @@
+{
+  "id": "pediatric_wheeze_child",
+  "category": "pediatric",
+  "title_ru": "Свистящее дыхание у ребенка",
+  "version": "v1",
+  "chief_complaint_patterns": [
+    "у ребенка свистящее дыхание"
+  ],
+  "body_regions": [
+    "respiratory"
+  ],
+  "must_ask": [
+    "Есть ли одышка при разговоре/плаче?",
+    "Был ли контакт с аллергеном?",
+    "Есть ли температура?"
+  ],
+  "red_flags": [
+    "severe_dyspnea",
+    "cyanosis",
+    "silent_chest"
+  ],
+  "likely_hypotheses": [
+    "bronchospasm_like",
+    "viral_wheeze",
+    "asthma_like"
+  ],
+  "possible_tests": [
+    "pulse_oximetry",
+    "clinical_exam"
+  ],
+  "self_care": [
+    "избегать триггеров",
+    "контроль дыхания",
+    "своевременный осмотр"
+  ],
+  "care_path": {
+    "default": "planned_or_urgent_assessment_by_symptoms",
+    "if_red_flags": "urgent_or_emergency_assessment"
+  },
+  "notes": "Phase-2 scenario pack for pre-LLM ranking and triage. Requires clinical review before production use."
+}

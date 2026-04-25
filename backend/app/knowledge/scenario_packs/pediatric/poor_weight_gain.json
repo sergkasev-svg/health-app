@@ -1,0 +1,43 @@
+{
+  "id": "pediatric_poor_weight_gain",
+  "category": "pediatric",
+  "title_ru": "Плохая прибавка веса",
+  "version": "v1",
+  "chief_complaint_patterns": [
+    "ребенок плохо набирает вес"
+  ],
+  "body_regions": [
+    "systemic",
+    "gastro"
+  ],
+  "must_ask": [
+    "Какой возраст и динамика веса?",
+    "Есть ли рвота/диарея?",
+    "Есть ли проблемы с аппетитом?"
+  ],
+  "red_flags": [
+    "failure_to_thrive_severe",
+    "dehydration",
+    "lethargy"
+  ],
+  "likely_hypotheses": [
+    "feeding_difficulty",
+    "malabsorption_like",
+    "chronic_infection_like"
+  ],
+  "possible_tests": [
+    "CBC",
+    "ferritin",
+    "stool_if_needed"
+  ],
+  "self_care": [
+    "частое дробное питание",
+    "оценка педиатра",
+    "контроль роста/веса"
+  ],
+  "care_path": {
+    "default": "planned_or_urgent_assessment_by_symptoms",
+    "if_red_flags": "urgent_or_emergency_assessment"
+  },
+  "notes": "Phase-2 scenario pack for pre-LLM ranking and triage. Requires clinical review before production use."
+}

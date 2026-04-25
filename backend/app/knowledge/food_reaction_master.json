@@ -1,0 +1,403 @@
+{
+  "module": "food_reaction_master",
+  "version": "2.0",
+  "intent": "patient_safe_food_symptom_reasoning",
+  "description": "Unified engine for food-related nausea, headache, heaviness, bloating, reflux-like symptoms, upper abdominal discomfort, and food-triggered GI reactions.",
+  "core_reasoning_policy": {
+    "default_priority_order": [
+      "fatty_fried_overload",
+      "functional_dyspepsia_or_gastric_irritation",
+      "biliary_reaction",
+      "pancreatic_overload",
+      "reflux_trigger",
+      "dairy_lactose_or_milk_sensitivity",
+      "postprandial_vascular_reaction",
+      "simple_overeating",
+      "ibs_food_trigger",
+      "histamine_trigger_conditional",
+      "sugar_load_reaction",
+      "alcohol_related_reaction"
+    ],
+    "rules": [
+      "Do not make histamine the default explanation.",
+      "For fried/fatty meals, first consider GI overload, dyspepsia, biliary reaction, reflux, overeating.",
+      "For dairy, first separate lactose-type pattern from fat-trigger pattern.",
+      "For wine, cheese, smoked or fermented foods, only elevate histamine if pattern repeats and includes flushing, palpitations, itching, nasal symptoms, migraine-like headache.",
+      "For IBS, require bowel-pattern clues such as bloating plus diarrhea/constipation or pain linked to bowel movement.",
+      "If red flags are present, stop household advice and escalate to urgent evaluation."
+    ]
+  },
+  "symptom_clusters": {
+    "nausea_headache_after_food": [
+      "fatty_fried_overload",
+      "biliary_reaction",
+      "pancreatic_overload",
+      "postprandial_vascular_reaction",
+      "histamine_trigger_conditional",
+      "alcohol_related_reaction"
+    ],
+    "upper_abdominal_heaviness_after_food": [
+      "fatty_fried_overload",
+      "functional_dyspepsia_or_gastric_irritation",
+      "simple_overeating",
+      "reflux_trigger",
+      "gastroparesis_pattern_if_recurrent"
+    ],
+    "bloating_gas_after_food": [
+      "dairy_lactose_or_milk_sensitivity",
+      "ibs_food_trigger",
+      "simple_overeating",
+      "carbohydrate_malabsorption_pattern"
+    ],
+    "right_upper_abdominal_discomfort_after_fatty_food": [
+      "biliary_reaction",
+      "fatty_fried_overload",
+      "pancreatic_overload"
+    ],
+    "heartburn_burning_regurgitation_after_food": [
+      "reflux_trigger",
+      "functional_dyspepsia_or_gastric_irritation",
+      "simple_overeating"
+    ],
+    "sleepiness_weakness_after_heavy_meal": [
+      "postprandial_vascular_reaction",
+      "simple_overeating",
+      "sugar_load_reaction"
+    ]
+  },
+  "causes": [
+    {
+      "id": "fatty_fried_overload",
+      "title": "Перегрузка ЖКТ жирной или жареной пищей",
+      "priority": "high",
+      "triggers": [
+        "жареный картофель",
+        "семечки",
+        "орехи",
+        "фастфуд",
+        "жирное мясо",
+        "шашлык",
+        "чипсы",
+        "маслянистая еда",
+        "переедание жирным"
+      ],
+      "mechanisms": [
+        "замедление переваривания",
+        "ферментная перегрузка",
+        "постпрандиальная тяжесть",
+        "усиление диспепсии на жирной пище"
+      ],
+      "typical_symptoms": [
+        "тошнота",
+        "тяжесть в животе",
+        "дискомфорт в верхней части живота",
+        "головная боль",
+        "слабость",
+        "сонливость"
+      ],
+      "supporting_clues": [
+        "стало хуже после жирной или жареной еды",
+        "нет явных аллергических признаков",
+        "связь с объёмом пищи"
+      ]
+    },
+    {
+      "id": "functional_dyspepsia_or_gastric_irritation",
+      "title": "Диспепсия или раздражение желудка",
+      "priority": "high",
+      "triggers": [
+        "обильная еда",
+        "жирная пища",
+        "кофе",
+        "газировка"
+      ],
+      "mechanisms": [
+        "диспепсия",
+        "раздражение слизистой",
+        "чувствительность верхнего ЖКТ"
+      ],
+      "typical_symptoms": [
+        "дискомфорт или боль в верхней части живота",
+        "тошнота",
+        "быстрое насыщение",
+        "ощущение переполнения после еды",
+        "отрыжка"
+      ]
+    },
+    {
+      "id": "biliary_reaction",
+      "title": "Реакция желчного пузыря на жирную пищу",
+      "priority": "high",
+      "triggers": [
+        "жирная пища",
+        "жареная пища",
+        "яйца",
+        "жирный сыр",
+        "масло",
+        "жирное мясо"
+      ],
+      "mechanisms": [
+        "активное сокращение желчного пузыря",
+        "спазм",
+        "застой желчи",
+        "билиарная колика при наличии камней"
+      ],
+      "typical_symptoms": [
+        "тошнота",
+        "горечь во рту",
+        "тяжесть или боль справа под рёбрами",
+        "боль в верхней части живота"
+      ]
+    },
+    {
+      "id": "pancreatic_overload",
+      "title": "Ферментная перегрузка или реакция поджелудочной",
+      "priority": "medium_high",
+      "triggers": [
+        "очень жирная еда",
+        "обильная еда",
+        "алкоголь плюс жирная еда",
+        "жареная пища"
+      ],
+      "mechanisms": [
+        "повышенная потребность в ферментах",
+        "затруднение переваривания жирной пищи"
+      ],
+      "typical_symptoms": [
+        "тошнота",
+        "тяжесть",
+        "дискомфорт в верхней части живота",
+        "слабость"
+      ]
+    },
+    {
+      "id": "reflux_trigger",
+      "title": "Рефлюкс или усиление изжоги после еды",
+      "priority": "medium_high",
+      "triggers": [
+        "жирная пища",
+        "обильная еда",
+        "алкоголь",
+        "кофе",
+        "шоколад",
+        "поздний ужин"
+      ],
+      "mechanisms": [
+        "рефлюкс",
+        "заброс содержимого желудка",
+        "усиление изжоги после еды"
+      ],
+      "typical_symptoms": [
+        "изжога",
+        "жжение за грудиной",
+        "кислая отрыжка",
+        "горечь",
+        "тошнота"
+      ]
+    },
+    {
+      "id": "dairy_lactose_or_milk_sensitivity",
+      "title": "Непереносимость молочного: лактоза или чувствительность к продукту",
+      "priority": "medium_high",
+      "triggers": [
+        "молоко",
+        "сливки",
+        "мороженое",
+        "мягкие молочные продукты",
+        "творог"
+      ],
+      "mechanisms": [
+        "лактазная недостаточность",
+        "индивидуальная чувствительность",
+        "реакция на жирность молочного продукта"
+      ],
+      "typical_symptoms": [
+        "вздутие",
+        "урчание",
+        "газ",
+        "диарея",
+        "тошнота"
+      ]
+    },
+    {
+      "id": "postprandial_vascular_reaction",
+      "title": "Сосудистая или вегетативная реакция после тяжёлой еды",
+      "priority": "medium",
+      "triggers": [
+        "обильная еда",
+        "жирная пища",
+        "алкоголь с едой",
+        "очень сладкая еда"
+      ],
+      "mechanisms": [
+        "перераспределение кровотока",
+        "колебания сосудистого тонуса",
+        "изменение давления"
+      ],
+      "typical_symptoms": [
+        "головная боль",
+        "слабость",
+        "сонливость",
+        "лёгкая тошнота"
+      ]
+    },
+    {
+      "id": "simple_overeating",
+      "title": "Простое переедание",
+      "priority": "medium",
+      "triggers": [
+        "большой объём еды",
+        "быстрая еда",
+        "сочетание нескольких тяжёлых блюд"
+      ],
+      "mechanisms": [
+        "переполнение желудка",
+        "замедленное опорожнение",
+        "диспепсия после переедания"
+      ],
+      "typical_symptoms": [
+        "переполненность",
+        "тяжесть",
+        "отрыжка",
+        "тошнота",
+        "сонливость"
+      ]
+    },
+    {
+      "id": "ibs_food_trigger",
+      "title": "Пищевой триггер при синдроме раздражённого кишечника",
+      "priority": "conditional"
+    },
+    {
+      "id": "histamine_trigger_conditional",
+      "title": "Гистамин как условная причина или усилитель",
+      "priority": "conditional",
+      "triggers": [
+        "вино",
+        "сыр",
+        "копчёности",
+        "выдержанные продукты",
+        "ферментированные продукты"
+      ],
+      "supporting_clues": [
+        "повторяемость именно на вино, сыр, копчёности",
+        "есть flushing или сердцебиение",
+        "есть кожные или носовые симптомы"
+      ]
+    },
+    {
+      "id": "sugar_load_reaction",
+      "title": "Реакция на избыток сладкого или сладкое после тяжёлой еды",
+      "priority": "conditional"
+    },
+    {
+      "id": "alcohol_related_reaction",
+      "title": "Алкогольная или смешанная реакция",
+      "priority": "conditional"
+    },
+    {
+      "id": "gastroparesis_pattern_if_recurrent",
+      "title": "Паттерн задержки опорожнения желудка, если симптомы регулярные",
+      "priority": "low_conditional"
+    },
+    {
+      "id": "carbohydrate_malabsorption_pattern",
+      "title": "Паттерн непереносимости части углеводов",
+      "priority": "low_conditional"
+    }
+  ],
+  "routing_logic": {
+    "if_trigger_contains": {
+      "fatty_or_fried_food": [
+        "fatty_fried_overload",
+        "functional_dyspepsia_or_gastric_irritation",
+        "biliary_reaction",
+        "pancreatic_overload",
+        "reflux_trigger"
+      ],
+      "dairy": [
+        "dairy_lactose_or_milk_sensitivity",
+        "fatty_fried_overload",
+        "biliary_reaction"
+      ],
+      "wine_cheese_smoked_fermented": [
+        "histamine_trigger_conditional",
+        "alcohol_related_reaction",
+        "reflux_trigger",
+        "fatty_fried_overload"
+      ],
+      "sweet_or_dessert": [
+        "sugar_load_reaction",
+        "simple_overeating",
+        "ibs_food_trigger"
+      ]
+    }
+  },
+  "red_flags": [
+    "сильная или нарастающая боль в верхней части живота",
+    "сильная боль справа под рёбрами",
+    "многократная рвота",
+    "температура",
+    "обморок или выраженное предобморочное состояние",
+    "одышка",
+    "боль в груди",
+    "пожелтение кожи или глаз",
+    "чёрный стул",
+    "кровь в рвоте",
+    "спутанность сознания",
+    "обезвоживание",
+    "невозможность пить жидкость"
+  ],
+  "what_to_do_now_patient_safe": [
+    "пить воду маленькими глотками",
+    "не ложиться сразу после еды",
+    "сделать паузу в тяжёлой и жирной пище",
+    "наблюдать, уменьшаются ли симптомы в ближайшие часы",
+    "если есть изжога — не ложиться и не есть поздно",
+    "если симптомы повторяются — фиксировать продукт-триггер"
+  ],
+  "tests_logic": {
+    "single_mild_episode": {
+      "recommend_immediate_tests": false,
+      "message": "При единичном лёгком эпизоде без красных флагов анализы обычно не нужны."
+    },
+    "recurrent_fatty_food_pattern": {
+      "recommend_tests": [
+        "АЛТ",
+        "АСТ",
+        "билирубин",
+        "ГГТ",
+        "амилаза",
+        "липаза",
+        "УЗИ органов брюшной полости"
+      ]
+    },
+    "dairy_pattern": {
+      "recommend_tests": [
+        "тестирование по клинической необходимости",
+        "иногда копрограмма",
+        "дальнейшая оценка по симптомам"
+      ]
+    },
+    "histamine_pattern": {
+      "recommend_tests": [
+        "обсуждение с врачом только при повторяемом типичном паттерне"
+      ],
+      "avoid_routine": [
+        "не рекомендовать всем подряд DAO",
+        "не рекомендовать всем подряд гистамин в крови",
+        "не рекомендовать IgG-панели совместимости продуктов"
+      ]
+    }
+  },
+  "response_template_patient_safe": {
+    "sections": [
+      "most_likely_explanation",
+      "possible_causes_in_priority_order",
+      "what_can_make_it_worse",
+      "what_to_do_now",
+      "when_to_seek_urgent_care",
+      "whether_tests_are_needed"
+    ]
+  }
+}

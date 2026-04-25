@@ -1,0 +1,51 @@
+{
+  "id": "respiratory_productive_cough_fever",
+  "category": "respiratory",
+  "title_ru": "Влажный кашель и температура",
+  "version": "v1",
+  "chief_complaint_patterns": [
+    "влажный кашель и температура"
+  ],
+  "body_regions": [
+    "nose",
+    "throat",
+    "chest",
+    "lungs"
+  ],
+  "must_ask": [
+    "Когда начались симптомы?",
+    "Есть ли температура?",
+    "Есть ли одышка или боль при дыхании?",
+    "Сухой кашель или с мокротой?"
+  ],
+  "red_flags": [
+    "severe_shortness_of_breath",
+    "cyanosis",
+    "chest_pain_with_breathing",
+    "confusion",
+    "persistent_high_fever"
+  ],
+  "likely_hypotheses": [
+    "viral_upper_respiratory_infection",
+    "pharyngitis_like",
+    "bronchitis_like",
+    "pneumonia_risk_if_red_flags"
+  ],
+  "possible_tests": [
+    "temperature check",
+    "pulse oximetry",
+    "clinical exam",
+    "CBC if needed"
+  ],
+  "self_care": [
+    "покой",
+    "обильное питье",
+    "контроль температуры",
+    "наблюдать за дыханием"
+  ],
+  "care_path": {
+    "default": "planned_or_urgent_assessment_by_symptoms",
+    "if_red_flags": "urgent_or_emergency_assessment"
+  },
+  "notes": "Starter scenario pack for triage flow. Requires clinical review before production use."
+}

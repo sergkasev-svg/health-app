@@ -1,0 +1,41 @@
+{
+  "id": "pediatric_headache_child_red_flags",
+  "category": "pediatric",
+  "title_ru": "Головная боль у ребенка с тревожными признаками",
+  "version": "v1",
+  "chief_complaint_patterns": [
+    "у ребенка головная боль с рвотой"
+  ],
+  "body_regions": [
+    "neuro"
+  ],
+  "must_ask": [
+    "Головная боль утренняя?",
+    "Есть ли рвота без тошноты?",
+    "Есть ли неврологические симптомы?"
+  ],
+  "red_flags": [
+    "neurologic_deficit",
+    "persistent_vomiting",
+    "sudden_worst_headache"
+  ],
+  "likely_hypotheses": [
+    "migraine_like",
+    "intracranial_pressure_risk",
+    "infection_rule_out"
+  ],
+  "possible_tests": [
+    "neurologic_exam",
+    "urgent_imaging_if_indicated"
+  ],
+  "self_care": [
+    "покой",
+    "контроль симптомов",
+    "срочная оценка при красных флагах"
+  ],
+  "care_path": {
+    "default": "planned_or_urgent_assessment_by_symptoms",
+    "if_red_flags": "urgent_or_emergency_assessment"
+  },
+  "notes": "Phase-2 scenario pack for pre-LLM ranking and triage. Requires clinical review before production use."
+}

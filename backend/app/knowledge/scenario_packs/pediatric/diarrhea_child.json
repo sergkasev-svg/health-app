@@ -1,0 +1,41 @@
+{
+  "id": "pediatric_diarrhea_child",
+  "category": "pediatric",
+  "title_ru": "Диарея у ребенка",
+  "version": "v1",
+  "chief_complaint_patterns": [
+    "у ребенка диарея несколько раз в день"
+  ],
+  "body_regions": [
+    "gastro"
+  ],
+  "must_ask": [
+    "Есть ли кровь в стуле?",
+    "Есть ли температура?",
+    "Пьет ли ребенок жидкость?"
+  ],
+  "red_flags": [
+    "blood_in_stool",
+    "dehydration",
+    "persistent_high_fever"
+  ],
+  "likely_hypotheses": [
+    "viral_enteritis_like",
+    "bacterial_enteritis_like",
+    "food_related_diarrhea"
+  ],
+  "possible_tests": [
+    "stool_tests_if_needed",
+    "clinical_exam"
+  ],
+  "self_care": [
+    "оральная регидратация",
+    "щадящее питание",
+    "контроль обезвоживания"
+  ],
+  "care_path": {
+    "default": "planned_or_urgent_assessment_by_symptoms",
+    "if_red_flags": "urgent_or_emergency_assessment"
+  },
+  "notes": "Phase-2 scenario pack for pre-LLM ranking and triage. Requires clinical review before production use."
+}

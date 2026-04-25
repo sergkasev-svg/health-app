@@ -1,0 +1,40 @@
+{
+  "id": "women_health_postpartum_bleeding_warning",
+  "category": "women_health",
+  "title_ru": "Кровотечение после родов",
+  "version": "v1",
+  "chief_complaint_patterns": [
+    "кровотечение после родов усилилось"
+  ],
+  "body_regions": [
+    "reproductive"
+  ],
+  "must_ask": [
+    "Сколько дней после родов?",
+    "Есть ли крупные сгустки?",
+    "Есть ли слабость/головокружение?"
+  ],
+  "red_flags": [
+    "postpartum_hemorrhage_risk",
+    "syncope",
+    "tachycardia"
+  ],
+  "likely_hypotheses": [
+    "postpartum_bleeding",
+    "retained_products_like",
+    "uterine_atony_like"
+  ],
+  "possible_tests": [
+    "CBC",
+    "urgent_obgyn_exam"
+  ],
+  "self_care": [
+    "срочно обратиться за помощью",
+    "не оставаться одной"
+  ],
+  "care_path": {
+    "default": "planned_or_urgent_assessment_by_symptoms",
+    "if_red_flags": "urgent_or_emergency_assessment"
+  },
+  "notes": "Phase-2 scenario pack for pre-LLM ranking and triage. Requires clinical review before production use."
+}

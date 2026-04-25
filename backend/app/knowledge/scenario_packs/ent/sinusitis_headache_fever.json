@@ -1,0 +1,40 @@
+{
+  "id": "ent_sinusitis_headache_fever",
+  "category": "ent",
+  "title_ru": "Синусит с головной болью и температурой",
+  "version": "v1",
+  "chief_complaint_patterns": [
+    "боль в лице и температура"
+  ],
+  "body_regions": [
+    "sinus",
+    "ent",
+    "neuro"
+  ],
+  "must_ask": [
+    "Локализация боли в лице?",
+    "Есть ли отек век?",
+    "Есть ли рвота/сильная слабость?"
+  ],
+  "red_flags": [
+    "orbital_complication_signs",
+    "severe_headache",
+    "confusion"
+  ],
+  "likely_hypotheses": [
+    "complicated_sinusitis_risk",
+    "viral_sinusitis_like"
+  ],
+  "possible_tests": [
+    "urgent_ent_exam"
+  ],
+  "self_care": [
+    "срочный очный осмотр",
+    "контроль температуры"
+  ],
+  "care_path": {
+    "default": "planned_or_urgent_assessment_by_symptoms",
+    "if_red_flags": "urgent_or_emergency_assessment"
+  },
+  "notes": "Phase-2 scenario pack for pre-LLM ranking and triage. Requires clinical review before production use."
+}

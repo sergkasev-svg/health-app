@@ -1,0 +1,40 @@
+{
+  "id": "women_health_breast_lump_new",
+  "category": "women_health",
+  "title_ru": "Новое уплотнение в груди",
+  "version": "v1",
+  "chief_complaint_patterns": [
+    "появилось новое уплотнение в груди"
+  ],
+  "body_regions": [
+    "breast"
+  ],
+  "must_ask": [
+    "Уплотнение связано с циклом?",
+    "Есть ли боль/выделения из соска?",
+    "Есть ли рост размера?"
+  ],
+  "red_flags": [
+    "bloody_nipple_discharge",
+    "rapid_growth",
+    "skin_retraction"
+  ],
+  "likely_hypotheses": [
+    "benign_breast_change",
+    "fibrocystic_change",
+    "oncology_rule_out_needed"
+  ],
+  "possible_tests": [
+    "breast_ultrasound",
+    "mammography_by_age"
+  ],
+  "self_care": [
+    "не откладывать консультацию",
+    "отслеживать динамику"
+  ],
+  "care_path": {
+    "default": "planned_or_urgent_assessment_by_symptoms",
+    "if_red_flags": "urgent_or_emergency_assessment"
+  },
+  "notes": "Phase-2 scenario pack for pre-LLM ranking and triage. Requires clinical review before production use."
+}

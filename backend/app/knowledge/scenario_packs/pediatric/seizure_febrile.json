@@ -1,0 +1,40 @@
+{
+  "id": "pediatric_seizure_febrile",
+  "category": "pediatric",
+  "title_ru": "Судороги на фоне температуры",
+  "version": "v1",
+  "chief_complaint_patterns": [
+    "у ребенка судороги на фоне температуры"
+  ],
+  "body_regions": [
+    "neuro",
+    "systemic"
+  ],
+  "must_ask": [
+    "Сколько длился эпизод?",
+    "Был ли контакт сохранен после эпизода?",
+    "Есть ли повторные эпизоды?"
+  ],
+  "red_flags": [
+    "seizure_prolonged",
+    "recurrent_same_day",
+    "postictal_persistent"
+  ],
+  "likely_hypotheses": [
+    "febrile_seizure_like",
+    "cns_infection_rule_out"
+  ],
+  "possible_tests": [
+    "urgent_clinical_assessment"
+  ],
+  "self_care": [
+    "обеспечить безопасность",
+    "контроль дыхания",
+    "срочная медицинская помощь"
+  ],
+  "care_path": {
+    "default": "planned_or_urgent_assessment_by_symptoms",
+    "if_red_flags": "urgent_or_emergency_assessment"
+  },
+  "notes": "Phase-2 scenario pack for pre-LLM ranking and triage. Requires clinical review before production use."
+}

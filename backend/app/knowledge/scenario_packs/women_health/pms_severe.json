@@ -1,0 +1,42 @@
+{
+  "id": "women_health_pms_severe",
+  "category": "women_health",
+  "title_ru": "Тяжелый ПМС",
+  "version": "v1",
+  "chief_complaint_patterns": [
+    "выраженный ПМС с перепадами настроения"
+  ],
+  "body_regions": [
+    "reproductive",
+    "neuro"
+  ],
+  "must_ask": [
+    "В какие дни цикла ухудшение?",
+    "Есть ли отеки/боль в молочных железах?",
+    "Влияет ли на работоспособность?"
+  ],
+  "red_flags": [
+    "suicidal_thoughts",
+    "severe_depression"
+  ],
+  "likely_hypotheses": [
+    "premenstrual_syndrome",
+    "pmdd_like",
+    "stress_related_flare"
+  ],
+  "possible_tests": [
+    "CBC",
+    "TSH",
+    "vitamin_d_if_needed"
+  ],
+  "self_care": [
+    "снижение соли и сахара",
+    "регулярный сон",
+    "легкая физактивность"
+  ],
+  "care_path": {
+    "default": "planned_or_urgent_assessment_by_symptoms",
+    "if_red_flags": "urgent_or_emergency_assessment"
+  },
+  "notes": "Phase-2 scenario pack for pre-LLM ranking and triage. Requires clinical review before production use."
+}

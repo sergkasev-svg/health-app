@@ -1,0 +1,43 @@
+{
+  "id": "women_health_pelvic_pain_fever",
+  "category": "women_health",
+  "title_ru": "Боль внизу живота и температура",
+  "version": "v1",
+  "chief_complaint_patterns": [
+    "боль внизу живота с температурой"
+  ],
+  "body_regions": [
+    "pelvis",
+    "reproductive"
+  ],
+  "must_ask": [
+    "Есть ли задержка менструации?",
+    "Есть ли выделения/кровотечение?",
+    "Есть ли тошнота или рвота?"
+  ],
+  "red_flags": [
+    "sepsis_signs",
+    "pregnancy_possible",
+    "acute_abdomen"
+  ],
+  "likely_hypotheses": [
+    "pelvic_inflammatory_disease_like",
+    "appendicitis_like",
+    "complicated_uti_like"
+  ],
+  "possible_tests": [
+    "CBC",
+    "CRP",
+    "pelvic_ultrasound",
+    "pregnancy_test"
+  ],
+  "self_care": [
+    "не откладывать очный осмотр",
+    "контроль температуры"
+  ],
+  "care_path": {
+    "default": "planned_or_urgent_assessment_by_symptoms",
+    "if_red_flags": "urgent_or_emergency_assessment"
+  },
+  "notes": "Phase-2 scenario pack for pre-LLM ranking and triage. Requires clinical review before production use."
+}

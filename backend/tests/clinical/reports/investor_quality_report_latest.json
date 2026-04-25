@@ -1,11 +1,11 @@
 {
-  "generated_at_utc": "2026-04-25T12:30:48.626790+00:00",
-  "overall_status": "PASS",
+  "generated_at_utc": "2026-04-25T14:16:30.531659+00:00",
+  "overall_status": "FAIL",
   "levels": [
     {
       "level": "starter",
-      "cases_file": "D:\\website zazdorovie.ru\\health-app\\backend\\tests\\clinical\\cases_endocrine_starter.jsonl",
-      "thresholds_file": "D:\\website zazdorovie.ru\\health-app\\backend\\tests\\clinical\\release_gate_thresholds.json",
+      "cases_file": "C:\\Users\\Gamer\\health-app\\backend\\tests\\clinical\\cases_endocrine_starter.jsonl",
+      "thresholds_file": "C:\\Users\\Gamer\\health-app\\backend\\tests\\clinical\\release_gate_thresholds.json",
       "thresholds": {
         "min_total_cases": 30,
         "max_loop_rate": 0.2,
@@ -17,18 +17,20 @@
         "total_cases": 35.0,
         "loop_rate": 0.0,
         "domain_drift_rate": 0.08571428571428572,
-        "redflag_recall": 0.8333333333333334,
+        "redflag_recall": 0.0,
         "repair_success_at_1": 1.0,
         "non_empty_response_rate": 1.0,
-        "human_tone_rate": 1.0
+        "human_tone_rate": 0.9714285714285714
       },
-      "status": "PASS",
-      "failed_metrics": []
+      "status": "FAIL",
+      "failed_metrics": [
+        "redflag_recall"
+      ]
     },
     {
       "level": "v1",
-      "cases_file": "D:\\website zazdorovie.ru\\health-app\\backend\\tests\\clinical\\cases_clinical_v1.jsonl",
-      "thresholds_file": "D:\\website zazdorovie.ru\\health-app\\backend\\tests\\clinical\\release_gate_thresholds_v1.json",
+      "cases_file": "C:\\Users\\Gamer\\health-app\\backend\\tests\\clinical\\cases_clinical_v1.jsonl",
+      "thresholds_file": "C:\\Users\\Gamer\\health-app\\backend\\tests\\clinical\\release_gate_thresholds_v1.json",
       "thresholds": {
         "min_total_cases": 1040,
         "max_loop_rate": 0.05,
@@ -41,14 +43,16 @@
       "metrics": {
         "total_cases": 1040.0,
         "loop_rate": 0.0,
-        "domain_drift_rate": 0.0,
-        "redflag_recall": 0.875,
+        "domain_drift_rate": 0.0019230769230769232,
+        "redflag_recall": 0.5625,
         "repair_success_at_1": 1.0,
         "non_empty_response_rate": 1.0,
-        "human_tone_rate": 0.9769230769230769
+        "human_tone_rate": 0.9634615384615385
       },
-      "status": "PASS",
-      "failed_metrics": []
+      "status": "FAIL",
+      "failed_metrics": [
+        "redflag_recall"
+      ]
     }
   ]
 }

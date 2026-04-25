@@ -1,0 +1,40 @@
+{
+  "id": "ent_ear_discharge",
+  "category": "ent",
+  "title_ru": "Выделения из уха",
+  "version": "v1",
+  "chief_complaint_patterns": [
+    "выделения из уха и заложенность"
+  ],
+  "body_regions": [
+    "ear",
+    "ent"
+  ],
+  "must_ask": [
+    "Какого цвета выделения?",
+    "Есть ли боль и температура?",
+    "Есть ли снижение слуха?"
+  ],
+  "red_flags": [
+    "high_fever",
+    "severe_pain",
+    "neurologic_symptoms"
+  ],
+  "likely_hypotheses": [
+    "otitis_media_perforation_like",
+    "otitis_externa_like"
+  ],
+  "possible_tests": [
+    "otoscopy",
+    "ear_swab_if_needed"
+  ],
+  "self_care": [
+    "не закапывать неизвестные средства",
+    "держать ухо сухим"
+  ],
+  "care_path": {
+    "default": "planned_or_urgent_assessment_by_symptoms",
+    "if_red_flags": "urgent_or_emergency_assessment"
+  },
+  "notes": "Phase-2 scenario pack for pre-LLM ranking and triage. Requires clinical review before production use."
+}

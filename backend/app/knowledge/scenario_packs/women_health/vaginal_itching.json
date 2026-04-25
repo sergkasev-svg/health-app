@@ -1,0 +1,42 @@
+{
+  "id": "women_health_vaginal_itching",
+  "category": "women_health",
+  "title_ru": "Зуд в интимной зоне",
+  "version": "v1",
+  "chief_complaint_patterns": [
+    "зуд и дискомфорт в интимной зоне"
+  ],
+  "body_regions": [
+    "reproductive",
+    "skin"
+  ],
+  "must_ask": [
+    "Есть ли творожистые выделения?",
+    "Недавно были антибиотики?",
+    "Есть ли сахарный диабет?"
+  ],
+  "red_flags": [
+    "severe_swelling",
+    "fever",
+    "ulcer_or_bleeding"
+  ],
+  "likely_hypotheses": [
+    "candidiasis_like",
+    "contact_dermatitis_like",
+    "vulvovaginitis_like"
+  ],
+  "possible_tests": [
+    "glucose",
+    "smear_microscopy"
+  ],
+  "self_care": [
+    "исключить раздражающие средства",
+    "хлопковое белье",
+    "бережный уход"
+  ],
+  "care_path": {
+    "default": "planned_or_urgent_assessment_by_symptoms",
+    "if_red_flags": "urgent_or_emergency_assessment"
+  },
+  "notes": "Phase-2 scenario pack for pre-LLM ranking and triage. Requires clinical review before production use."
+}

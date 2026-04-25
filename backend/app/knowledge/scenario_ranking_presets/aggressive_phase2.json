@@ -1,0 +1,16 @@
+{
+  "branch_bonus": {
+    "default": 0.18,
+    "women_health": 0.62,
+    "pediatric": 0.62,
+    "ent": 0.5
+  },
+  "context_weights": {
+    "pediatric_match_boost": 0.95,
+    "women_health_match_boost": 0.95,
+    "ent_match_boost": 0.75,
+    "women_health_when_pediatric_penalty": -0.2,
+    "pediatric_when_women_health_penalty": -0.2,
+    "resp_or_oral_when_ent_penalty": -0.14
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "entity_type": "microbe",
+  "name": "Roseburia inulinivorans",
+  "aliases": ["R. inulinivorans"],
+  "domain": ["microbiome", "muscle", "sarcopenia", "gut-muscle axis"],
+  "summary_ru": "Бутират-продуцирующая кишечная бактерия. В наблюдательных когортах ассоциирована с большей мышечной силой у молодых и пожилых людей; в мышиной модели введение R. inulinivorans сопровождалось увеличением силы хвата и изменениями мышечного метаболизма.",
+  "evidence_level": "human association + animal causal support",
+  "claim_status": "promising_not_clinically_proven",
+  "mechanisms_hypothesized": [
+    "production_of_butyrate",
+    "muscle_energy_metabolism_modulation",
+    "shift_toward_type_II_fibers"
+  ],
+  "potential_relevance": [
+    "sarcopenia",
+    "age_related_muscle_weakness",
+    "muscle_atrophy"
+  ],
+  "not_for_overclaim": [
+    "Не считать доказанным лечением саркопении у человека",
+    "Не обещать рост силы без клинических испытаний у людей",
+    "Не назначать пробиотик с клиническими обещаниями"
+  ],
+  "source_primary": {
+    "title": "Roseburia inulinivorans increases muscle strength",
+    "journal": "Gut",
+    "doi": "10.1136/gutjnl-2025-336980"
+  },
+  "reference_text": "Roseburia inulinivorans — кишечная бутират-продуцирующая бактерия, которая в новом исследовании была связана с более высокой мышечной силой у людей. В мышиной модели её введение сопровождалось увеличением силы хвата и признаками более благоприятного мышечного метаболизма. Это поддерживает концепцию оси «кишечник—мышцы» и делает R. inulinivorans перспективным кандидатом для дальнейших исследований при саркопении и возрастном снижении мышечной функции. Однако на текущий момент это не является доказанной терапией для человека и не должно использоваться как самостоятельное основание для лечения."
+}

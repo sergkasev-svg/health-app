@@ -1,0 +1,49 @@
+{
+  "id": "gastro_black_stool_warning",
+  "category": "gastro",
+  "title_ru": "Темный стул",
+  "version": "v1",
+  "chief_complaint_patterns": [
+    "темный стул"
+  ],
+  "body_regions": [
+    "abdomen",
+    "stomach",
+    "bowel"
+  ],
+  "must_ask": [
+    "Где именно болит?",
+    "Есть ли рвота или диарея?",
+    "Есть ли температура?",
+    "Связано ли с приемом пищи?"
+  ],
+  "red_flags": [
+    "rigid_abdomen",
+    "repeated_vomiting",
+    "blood_in_vomit",
+    "black_stool",
+    "severe_dehydration"
+  ],
+  "likely_hypotheses": [
+    "gastritis_or_reflux_like",
+    "gastroenteritis_like",
+    "gallbladder_or_appendix_risk_by_location"
+  ],
+  "possible_tests": [
+    "clinical exam",
+    "CBC if needed",
+    "basic chemistry if dehydration",
+    "abdominal ultrasound when appropriate"
+  ],
+  "self_care": [
+    "пить небольшими порциями",
+    "щадящая еда",
+    "контроль обезвоживания",
+    "избегать жирной и раздражающей пищи"
+  ],
+  "care_path": {
+    "default": "planned_or_urgent_assessment_by_symptoms",
+    "if_red_flags": "urgent_or_emergency_assessment"
+  },
+  "notes": "Starter scenario pack for triage flow. Requires clinical review before production use."
+}

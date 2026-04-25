@@ -1,0 +1,39 @@
+{
+  "id": "pediatric_constipation_child",
+  "category": "pediatric",
+  "title_ru": "Запор у ребенка",
+  "version": "v1",
+  "chief_complaint_patterns": [
+    "у ребенка запор и боль при дефекации"
+  ],
+  "body_regions": [
+    "gastro"
+  ],
+  "must_ask": [
+    "Сколько дней без стула?",
+    "Есть ли кровь на бумаге?",
+    "Есть ли рвота/вздутие?"
+  ],
+  "red_flags": [
+    "severe_abdominal_distension",
+    "bilious_vomiting",
+    "blood_persistent"
+  ],
+  "likely_hypotheses": [
+    "functional_constipation",
+    "anal_fissure_like"
+  ],
+  "possible_tests": [
+    "clinical_exam"
+  ],
+  "self_care": [
+    "вода и клетчатка по возрасту",
+    "режим туалета",
+    "наблюдение"
+  ],
+  "care_path": {
+    "default": "planned_or_urgent_assessment_by_symptoms",
+    "if_red_flags": "urgent_or_emergency_assessment"
+  },
+  "notes": "Phase-2 scenario pack for pre-LLM ranking and triage. Requires clinical review before production use."
+}

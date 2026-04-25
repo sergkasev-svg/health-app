@@ -1,0 +1,40 @@
+{
+  "id": "ent_snoring_apnea_like",
+  "category": "ent",
+  "title_ru": "Храп и остановки дыхания во сне",
+  "version": "v1",
+  "chief_complaint_patterns": [
+    "храп с остановками дыхания"
+  ],
+  "body_regions": [
+    "ent",
+    "sleep"
+  ],
+  "must_ask": [
+    "Есть ли дневная сонливость?",
+    "Наблюдали ли остановки дыхания?",
+    "Есть ли утренние головные боли?"
+  ],
+  "red_flags": [
+    "witnessed_apnea_with_desaturation",
+    "severe_daytime_sleepiness"
+  ],
+  "likely_hypotheses": [
+    "obstructive_sleep_apnea_like",
+    "adenoid_hypertrophy_like"
+  ],
+  "possible_tests": [
+    "sleep_study_if_indicated",
+    "ent_exam"
+  ],
+  "self_care": [
+    "сон на боку",
+    "контроль веса",
+    "плановый осмотр"
+  ],
+  "care_path": {
+    "default": "planned_or_urgent_assessment_by_symptoms",
+    "if_red_flags": "urgent_or_emergency_assessment"
+  },
+  "notes": "Phase-2 scenario pack for pre-LLM ranking and triage. Requires clinical review before production use."
+}

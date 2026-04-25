@@ -1,0 +1,42 @@
+{
+  "id": "women_health_pregnancy_bleeding_warning",
+  "category": "women_health",
+  "title_ru": "Кровянистые выделения при беременности",
+  "version": "v1",
+  "chief_complaint_patterns": [
+    "кровянистые выделения во время беременности"
+  ],
+  "body_regions": [
+    "reproductive"
+  ],
+  "must_ask": [
+    "Какой срок беременности?",
+    "Есть ли боль/спазмы?",
+    "Объем кровотечения увеличивается?"
+  ],
+  "red_flags": [
+    "pregnancy_bleeding_active",
+    "severe_pain",
+    "syncope"
+  ],
+  "likely_hypotheses": [
+    "threatened_miscarriage_like",
+    "ectopic_pregnancy_risk",
+    "placental_issue_like"
+  ],
+  "possible_tests": [
+    "pregnancy_test",
+    "hcg_dynamic",
+    "urgent_ultrasound"
+  ],
+  "self_care": [
+    "срочная очная оценка",
+    "ограничить нагрузку",
+    "контроль кровотечения"
+  ],
+  "care_path": {
+    "default": "planned_or_urgent_assessment_by_symptoms",
+    "if_red_flags": "urgent_or_emergency_assessment"
+  },
+  "notes": "Phase-2 scenario pack for pre-LLM ranking and triage. Requires clinical review before production use."
+}

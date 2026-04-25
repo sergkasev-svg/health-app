@@ -1,0 +1,42 @@
+{
+  "id": "ent_vertigo_ent",
+  "category": "ent",
+  "title_ru": "Головокружение с ЛОР-признаками",
+  "version": "v1",
+  "chief_complaint_patterns": [
+    "головокружение с шумом в ухе"
+  ],
+  "body_regions": [
+    "ear",
+    "ent",
+    "neuro"
+  ],
+  "must_ask": [
+    "Есть ли снижение слуха?",
+    "Есть ли тошнота/рвота?",
+    "Провоцируется ли поворотом головы?"
+  ],
+  "red_flags": [
+    "neurologic_deficit",
+    "severe_persistent_vomiting"
+  ],
+  "likely_hypotheses": [
+    "vestibular_neuritis_like",
+    "meniere_like",
+    "bppv_like"
+  ],
+  "possible_tests": [
+    "ent_exam",
+    "vestibular_tests"
+  ],
+  "self_care": [
+    "избегать резких движений",
+    "гидратация",
+    "плановый осмотр"
+  ],
+  "care_path": {
+    "default": "planned_or_urgent_assessment_by_symptoms",
+    "if_red_flags": "urgent_or_emergency_assessment"
+  },
+  "notes": "Phase-2 scenario pack for pre-LLM ranking and triage. Requires clinical review before production use."
+}

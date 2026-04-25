@@ -1,0 +1,40 @@
+{
+  "id": "women_health_vaginal_discharge",
+  "category": "women_health",
+  "title_ru": "Необычные выделения",
+  "version": "v1",
+  "chief_complaint_patterns": [
+    "необычные влагалищные выделения"
+  ],
+  "body_regions": [
+    "reproductive"
+  ],
+  "must_ask": [
+    "Есть ли запах/зуд/жжение?",
+    "Какого цвета выделения?",
+    "Есть ли боль внизу живота?"
+  ],
+  "red_flags": [
+    "fever",
+    "pelvic_pain_severe",
+    "pregnancy_bleeding"
+  ],
+  "likely_hypotheses": [
+    "vaginitis_like",
+    "bacterial_vaginosis_like",
+    "sti_like"
+  ],
+  "possible_tests": [
+    "smear_microscopy",
+    "sti_pcr_if_needed"
+  ],
+  "self_care": [
+    "интимная гигиена без агрессивных средств",
+    "избегать самолечения антибиотиками"
+  ],
+  "care_path": {
+    "default": "planned_or_urgent_assessment_by_symptoms",
+    "if_red_flags": "urgent_or_emergency_assessment"
+  },
+  "notes": "Phase-2 scenario pack for pre-LLM ranking and triage. Requires clinical review before production use."
+}

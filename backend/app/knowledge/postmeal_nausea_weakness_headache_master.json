@@ -1,0 +1,101 @@
+{
+  "module": "postmeal_nausea_weakness_headache_master",
+  "version": "1.0",
+  "intent": "patient_safe_postmeal_systemic_reaction",
+  "description": "Unified engine for nausea, weakness, dizziness, headache, and feeling unwell after food.",
+  "core_reasoning_policy": {
+    "default_priority_order": [
+      "fatty_food_systemic_overload",
+      "postprandial_vascular_reaction",
+      "sugar_glucose_reaction",
+      "simple_overeating",
+      "mild_dehydration_pattern",
+      "histamine_conditional_pattern",
+      "alcohol_related_pattern",
+      "combined_food_trigger_pattern",
+      "alarm_systemic_route"
+    ],
+    "rules": [
+      "Do not explain all symptoms by GI alone.",
+      "Always consider vascular and metabolic reactions.",
+      "Histamine should not be default explanation.",
+      "Glucose reaction should be considered when sugar is involved.",
+      "If symptoms include fainting, severe weakness, chest pain, or neurological signs, escalate immediately."
+    ]
+  },
+  "causes": [
+    {
+      "id": "fatty_food_systemic_overload",
+      "title": "Системная реакция на жирную пищу",
+      "priority": "high"
+    },
+    {
+      "id": "postprandial_vascular_reaction",
+      "title": "Сосудистая реакция после еды",
+      "priority": "high"
+    },
+    {
+      "id": "sugar_glucose_reaction",
+      "title": "Реакция на сахар / глюкозу",
+      "priority": "medium_high"
+    },
+    {
+      "id": "simple_overeating",
+      "title": "Переедание",
+      "priority": "medium"
+    },
+    {
+      "id": "mild_dehydration_pattern",
+      "title": "Лёгкое обезвоживание",
+      "priority": "medium"
+    },
+    {
+      "id": "histamine_conditional_pattern",
+      "title": "Гистаминовая реакция (условная)",
+      "priority": "conditional"
+    },
+    {
+      "id": "alcohol_related_pattern",
+      "title": "Алкогольная реакция",
+      "priority": "conditional"
+    },
+    {
+      "id": "combined_food_trigger_pattern",
+      "title": "Комбинированная пищевая нагрузка",
+      "priority": "medium"
+    },
+    {
+      "id": "alarm_systemic_route",
+      "title": "Тревожная системная реакция",
+      "priority": "urgent"
+    }
+  ],
+  "red_flags": [
+    "обморок",
+    "сильное головокружение",
+    "боль в груди",
+    "одышка",
+    "спутанность сознания",
+    "сильная слабость",
+    "невозможность стоять",
+    "резкое ухудшение состояния"
+  ],
+  "tests_logic": {
+    "single_episode": {
+      "recommend_tests": false
+    },
+    "recurrent_pattern": {
+      "recommend_tests": [
+        "глюкоза крови",
+        "биохимия",
+        "оценка ЖКТ при необходимости"
+      ]
+    }
+  },
+  "patient_safe_response_structure": [
+    "most_likely_cause",
+    "alternative_causes",
+    "what_to_do_now",
+    "when_to_seek_help"
+  ]
+}

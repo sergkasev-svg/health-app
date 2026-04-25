@@ -1,0 +1,47 @@
+{
+  "id": "fatigue_deficiency_heavy_periods_fatigue",
+  "category": "fatigue_deficiency",
+  "title_ru": "Сильные месячные и слабость",
+  "version": "v1",
+  "chief_complaint_patterns": [
+    "сильные месячные и слабость"
+  ],
+  "body_regions": [
+    "general",
+    "blood",
+    "endocrine"
+  ],
+  "must_ask": [
+    "Как давно держится слабость?",
+    "Есть ли бледность, одышка или сердцебиение?",
+    "Есть ли похудение, набор веса или зябкость?",
+    "Есть ли заметные изменения питания или кровопотери?"
+  ],
+  "red_flags": [
+    "fainting",
+    "chest_pain",
+    "severe_shortness_of_breath",
+    "rapid_weight_loss"
+  ],
+  "likely_hypotheses": [
+    "iron_deficiency_or_anemia_like",
+    "thyroid_or_metabolic_issue",
+    "post_infectious_or_sleep_related_fatigue"
+  ],
+  "possible_tests": [
+    "CBC",
+    "ferritin",
+    "B12/folate when appropriate",
+    "TSH if indicated"
+  ],
+  "self_care": [
+    "снизить нагрузку",
+    "следить за сном и питанием",
+    "подготовить список симптомов и анализов для врача"
+  ],
+  "care_path": {
+    "default": "planned_or_urgent_assessment_by_symptoms",
+    "if_red_flags": "urgent_or_emergency_assessment"
+  },
+  "notes": "Starter scenario pack for triage flow. Requires clinical review before production use."
+}

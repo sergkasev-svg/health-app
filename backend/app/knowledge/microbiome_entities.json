@@ -1,0 +1,211 @@
+[
+  {
+    "id": "roseburia_inulinivorans",
+    "name": "Roseburia inulinivorans",
+    "aliases": ["R. inulinivorans"],
+    "axes": ["gut_muscle"],
+    "entity_type": "microbe",
+    "evidence_level": "human_association_plus_animal_support",
+    "claim_status": "promising_not_clinically_proven",
+    "safe_claims_ru": [
+      "связана с более высокой мышечной силой",
+      "поддерживает концепцию оси кишечник-мышцы",
+      "перспективный кандидат для дальнейших исследований"
+    ],
+    "forbidden_claims_ru": [
+      "лечит саркопению",
+      "доказанно повышает силу у людей",
+      "назначить как терапию"
+    ],
+    "mechanisms": [
+      "butyrate_related_metabolism",
+      "muscle_energy_metabolism_modulation",
+      "possible_fiber_type_shift"
+    ],
+    "retrieval_tags": [
+      "microbiome",
+      "muscle",
+      "gut-muscle",
+      "sarcopenia",
+      "butyrate",
+      "grip_strength",
+      "aging",
+      "frailty",
+      "vo2_max"
+    ],
+    "sources": [
+      {
+        "type": "pubmed",
+        "value": "41806991"
+      },
+      {
+        "type": "journal",
+        "value": "Gut 2026 doi:10.1136/gutjnl-2025-336980"
+      }
+    ]
+  },
+  {
+    "id": "faecalibacterium_prausnitzii",
+    "name": "Faecalibacterium prausnitzii",
+    "aliases": ["F. prausnitzii"],
+    "axes": ["gut_immune", "gut_brain", "gut_skin"],
+    "entity_type": "microbe",
+    "evidence_level": "mechanistic_plus_preclinical_plus_associative_human_data",
+    "claim_status": "anti_inflammatory_candidate",
+    "safe_claims_ru": [
+      "связана с противовоспалительными эффектами",
+      "поддерживает кишечный барьер",
+      "может быть частью более благоприятного микробиомного профиля"
+    ],
+    "forbidden_claims_ru": [
+      "лечит воспалительные заболевания",
+      "назначить как стандартную терапию"
+    ],
+    "mechanisms": [
+      "tight_junction_support",
+      "barrier_support",
+      "iga_related_immune_modulation"
+    ],
+    "retrieval_tags": [
+      "inflammation",
+      "barrier",
+      "immune",
+      "gut-skin",
+      "gut-brain"
+    ],
+    "sources": [
+      {"type": "pubmed", "value": "31503404"},
+      {"type": "pubmed", "value": "25888448"},
+      {"type": "pubmed", "value": "40660288"}
+    ]
+  },
+  {
+    "id": "akkermansia_muciniphila",
+    "name": "Akkermansia muciniphila",
+    "aliases": ["A. muciniphila"],
+    "axes": ["gut_immune", "gut_skin"],
+    "entity_type": "microbe",
+    "evidence_level": "mechanistic_plus_preclinical_plus_early_translational",
+    "claim_status": "barrier_support_candidate",
+    "safe_claims_ru": [
+      "связана с целостностью кишечного барьера",
+      "ассоциируется с более благоприятным метаболическим и воспалительным профилем",
+      "перспективный объект микробиомных вмешательств"
+    ],
+    "forbidden_claims_ru": [
+      "лечит воспаление",
+      "назначить как доказанную терапию"
+    ],
+    "mechanisms": [
+      "barrier_support",
+      "reduced_metabolic_endotoxemia",
+      "inflammation_modulation"
+    ],
+    "retrieval_tags": [
+      "barrier",
+      "immune",
+      "endotoxemia",
+      "skin",
+      "metabolism"
+    ],
+    "sources": [
+      {"type": "pubmed", "value": "23671105"},
+      {"type": "pubmed", "value": "27143680"}
+    ]
+  },
+  {
+    "id": "bifidobacterium_longum_1714",
+    "name": "Bifidobacterium longum 1714",
+    "aliases": ["B. longum 1714"],
+    "axes": ["gut_brain"],
+    "entity_type": "microbe",
+    "evidence_level": "human_signal_with_mixed_followup",
+    "claim_status": "stress_response_candidate",
+    "safe_claims_ru": [
+      "может быть связана со снижением субъективного стресса и отдельными параметрами сна",
+      "относится к перспективным психобиотическим кандидатам",
+      "эффект не универсальный; результаты по психобиотикам смешанные"
+    ],
+    "forbidden_claims_ru": [
+      "лечит депрессию",
+      "заменяет психотерапию или психиатра"
+    ],
+    "mechanisms": [
+      "gut_brain_axis_modulation"
+    ],
+    "retrieval_tags": [
+      "stress",
+      "mood",
+      "gut-brain",
+      "psychobiotic"
+    ],
+    "sources": [
+      {"type": "pubmed", "value": "27801892"},
+      {"type": "pubmed", "value": "31425155"}
+    ]
+  },
+  {
+    "id": "bifidobacterium_breve_ccfm1025",
+    "name": "Bifidobacterium breve CCFM1025",
+    "aliases": ["B. breve CCFM1025"],
+    "axes": ["gut_brain"],
+    "entity_type": "microbe",
+    "evidence_level": "rct_signal_depressive_symptoms_gi",
+    "claim_status": "promising_psychobiotic_candidate",
+    "safe_claims_ru": [
+      "в РКИ показан сигнал по ослаблению симптомов депрессии и связанных ЖКТ-жалоб",
+      "перспективный психобиотический кандидат",
+      "не является готовым назначением, не заменяет стандартное лечение депрессии"
+    ],
+    "forbidden_claims_ru": [
+      "лечит депрессию",
+      "назначить как терапию депрессии",
+      "заменяет антидепрессанты или психотерапию"
+    ],
+    "mechanisms": [
+      "microbiome_tryptophan_metabolism",
+      "gut_brain_axis"
+    ],
+    "retrieval_tags": [
+      "depression",
+      "mood",
+      "gut-brain",
+      "psychobiotic",
+      "RCT"
+    ],
+    "sources": [
+      {"type": "pubmed", "value": "RCT depressive symptoms CCFM1025"}
+    ]
+  },
+  {
+    "id": "lactobacillus_rhamnosus_jb1",
+    "name": "Lactobacillus rhamnosus JB-1",
+    "aliases": ["L. rhamnosus JB-1"],
+    "axes": ["gut_brain"],
+    "entity_type": "microbe",
+    "evidence_level": "preclinical_strong",
+    "claim_status": "brain_axis_mechanistic_model",
+    "safe_claims_ru": [
+      "в доклинических моделях влияет на стресс-ответ и поведение",
+      "поддерживает концепцию оси кишечник-мозг"
+    ],
+    "forbidden_claims_ru": [
+      "лечит тревогу у людей",
+      "лечит депрессию у людей"
+    ],
+    "mechanisms": [
+      "vagus_mediated_signalling",
+      "gaba_related_changes",
+      "stress_axis_modulation"
+    ],
+    "retrieval_tags": [
+      "stress",
+      "vagus",
+      "gut-brain",
+      "preclinical"
+    ],
+    "sources": [
+      {"type": "pubmed", "value": "21876150"}
+    ]
+  }
+]

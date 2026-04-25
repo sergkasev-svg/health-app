@@ -1,0 +1,102 @@
+{
+  "module": "postmeal_bloating_diarrhea_master",
+  "version": "1.0",
+  "intent": "patient_safe_bowel_pattern_reasoning",
+  "description": "Unified engine for bloating, gas, rumbling, diarrhea, urgency, loose stool, and bowel discomfort after food.",
+  "core_reasoning_policy": {
+    "default_priority_order": [
+      "simple_overeating_or_fast_eating",
+      "lactose_or_dairy_pattern",
+      "fodmap_fermentation_pattern",
+      "food_triggered_ibs_pattern",
+      "fatty_food_bowel_trigger",
+      "acute_infectious_gastroenteritis_pattern",
+      "carbohydrate_malabsorption_pattern",
+      "bile_acid_or_post_cholecystectomy_pattern_conditional",
+      "alarm_non_functional_bowel_route"
+    ],
+    "rules": [
+      "Do not diagnose IBS from a single food-related episode.",
+      "Do not use dysbiosis as a default explanation.",
+      "For dairy, first consider lactose or dairy sensitivity if symptoms are bloating, gas, rumbling, diarrhea, nausea.",
+      "For bloating plus bowel change recurring over time, consider IBS pattern only if pain is recurrent and related to bowel movements or stool changes.",
+      "For sudden diarrhea/vomiting with fever or sick contacts, elevate infectious gastroenteritis.",
+      "For isolated gas/bloating after heavy meals, keep overeating and fermentation patterns above pathology.",
+      "If blood in stool, black stool, dehydration, severe pain, persistent vomiting, fainting, or high fever are present, route to urgent evaluation."
+    ]
+  },
+  "red_flags": [
+    "кровь в стуле",
+    "чёрный стул",
+    "высокая температура или выраженная лихорадка",
+    "сильная или нарастающая боль в животе",
+    "неукротимая рвота",
+    "обморок или выраженное предобморочное состояние",
+    "признаки обезвоживания",
+    "редкое мочеиспускание",
+    "спутанность сознания",
+    "симптомы не уменьшаются и явно ухудшаются"
+  ],
+  "tests_logic": {
+    "single_mild_episode": {
+      "recommend_immediate_tests": false,
+      "message": "При единичном лёгком эпизоде срочные анализы обычно не нужны."
+    },
+    "recurrent_dairy_pattern": {
+      "recommend_tests": [
+        "клиническая оценка на непереносимость молочного по симптомам"
+      ]
+    },
+    "recurrent_bloating_plus_stool_change_pattern": {
+      "recommend_tests": [
+        "дальнейшая оценка по клинической необходимости",
+        "рассмотрение IBS-паттерна при повторяемости"
+      ]
+    }
+  },
+  "patient_safe_response_structure": [
+    "what_is_most_likely",
+    "possible_causes_in_priority_order",
+    "what_to_do_now",
+    "when_to_seek_urgent_care",
+    "whether_tests_are_needed_if_recurrent"
+  ],
+  "causes": [
+    {
+      "id": "simple_overeating_or_fast_eating",
+      "title": "Переедание или слишком быстрый приём пищи"
+    },
+    {
+      "id": "lactose_or_dairy_pattern",
+      "title": "Лактозный или молочный паттерн"
+    },
+    {
+      "id": "fodmap_fermentation_pattern",
+      "title": "FODMAP / брожение углеводов"
+    },
+    {
+      "id": "food_triggered_ibs_pattern",
+      "title": "Пищевой триггер при IBS-паттерне"
+    },
+    {
+      "id": "fatty_food_bowel_trigger",
+      "title": "Кишечная реакция на жирную пищу"
+    },
+    {
+      "id": "acute_infectious_gastroenteritis_pattern",
+      "title": "Острая кишечная инфекция / гастроэнтерит"
+    },
+    {
+      "id": "carbohydrate_malabsorption_pattern",
+      "title": "Непереносимость части углеводов"
+    },
+    {
+      "id": "bile_acid_or_post_cholecystectomy_pattern_conditional",
+      "title": "Желчный / постхолецистэктомический паттерн"
+    },
+    {
+      "id": "alarm_non_functional_bowel_route",
+      "title": "Тревожная кишечная ветка"
+    }
+  ]
+}

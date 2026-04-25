@@ -1,0 +1,41 @@
+{
+  "id": "ent_tonsillitis_exudate",
+  "category": "ent",
+  "title_ru": "Боль в горле с налетами",
+  "version": "v1",
+  "chief_complaint_patterns": [
+    "боль в горле и налеты на миндалинах"
+  ],
+  "body_regions": [
+    "throat",
+    "ent"
+  ],
+  "must_ask": [
+    "Есть ли высокая температура?",
+    "Есть ли увеличенные лимфоузлы?",
+    "Есть ли кашель?"
+  ],
+  "red_flags": [
+    "drooling",
+    "trismus",
+    "airway_compromise"
+  ],
+  "likely_hypotheses": [
+    "tonsillitis_like",
+    "streptococcal_pharyngitis_like",
+    "peritonsillar_abscess_risk"
+  ],
+  "possible_tests": [
+    "rapid_strep_test_if_needed"
+  ],
+  "self_care": [
+    "обильное теплое питье",
+    "щадящий режим",
+    "контроль глотания"
+  ],
+  "care_path": {
+    "default": "planned_or_urgent_assessment_by_symptoms",
+    "if_red_flags": "urgent_or_emergency_assessment"
+  },
+  "notes": "Phase-2 scenario pack for pre-LLM ranking and triage. Requires clinical review before production use."
+}

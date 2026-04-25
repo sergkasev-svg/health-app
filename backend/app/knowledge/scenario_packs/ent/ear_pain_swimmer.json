@@ -1,0 +1,39 @@
+{
+  "id": "ent_ear_pain_swimmer",
+  "category": "ent",
+  "title_ru": "Боль в ухе после воды",
+  "version": "v1",
+  "chief_complaint_patterns": [
+    "боль в ухе после купания"
+  ],
+  "body_regions": [
+    "ear",
+    "ent"
+  ],
+  "must_ask": [
+    "Боль усиливается при касании уха?",
+    "Есть ли выделения?",
+    "Есть ли температура?"
+  ],
+  "red_flags": [
+    "severe_pain_with_fever",
+    "mastoid_swelling"
+  ],
+  "likely_hypotheses": [
+    "otitis_externa_like",
+    "otitis_media_like"
+  ],
+  "possible_tests": [
+    "otoscopy"
+  ],
+  "self_care": [
+    "сухость уха",
+    "избегать самостоятельной чистки",
+    "осмотр ЛОР"
+  ],
+  "care_path": {
+    "default": "planned_or_urgent_assessment_by_symptoms",
+    "if_red_flags": "urgent_or_emergency_assessment"
+  },
+  "notes": "Phase-2 scenario pack for pre-LLM ranking and triage. Requires clinical review before production use."
+}

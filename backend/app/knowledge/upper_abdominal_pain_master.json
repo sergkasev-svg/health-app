@@ -1,0 +1,221 @@
+{
+  "module": "upper_abdominal_pain_master",
+  "version": "1.0",
+  "intent": "patient_safe_upper_abdominal_reasoning",
+  "description": "Unified engine for upper abdominal pain, heaviness, nausea, post-meal discomfort, reflux-like symptoms, biliary patterns, pancreatic warning patterns, ulcer-risk patterns, and urgency routing.",
+  "core_reasoning_policy": {
+    "default_priority_order": [
+      "functional_dyspepsia_or_gastric_irritation",
+      "fatty_food_overload",
+      "reflux_or_postprandial_reflux",
+      "biliary_pattern",
+      "simple_overeating",
+      "ulcer_or_gastritis_risk_pattern",
+      "pancreatic_warning_pattern",
+      "ibs_not_primary_for_upper_abdomen",
+      "cardiac_or_non_gi_red_flag_route"
+    ],
+    "rules": [
+      "For mild upper abdominal heaviness after food, first consider dyspepsia, gastric irritation, fatty-food overload, reflux, or overeating.",
+      "Do not jump to pancreatitis without severe pain, progression, vomiting, fever, or a more toxic appearance.",
+      "If pain is clearly right upper abdomen and triggered by fatty food, elevate biliary_pattern.",
+      "If burning, acid regurgitation, or worsening when lying down are present, elevate reflux_or_postprandial_reflux.",
+      "If black stool, blood in vomit, fainting, severe persistent pain, jaundice, chest pain, or shortness of breath are present, route to urgent evaluation.",
+      "IBS is not a primary explanation for isolated upper abdominal post-meal pain unless there is a bowel-pattern history."
+    ]
+  },
+  "symptom_clusters": {
+    "upper_abdominal_heaviness_after_food": [
+      "functional_dyspepsia_or_gastric_irritation",
+      "fatty_food_overload",
+      "simple_overeating",
+      "reflux_or_postprandial_reflux"
+    ],
+    "upper_abdominal_pain_with_nausea": [
+      "functional_dyspepsia_or_gastric_irritation",
+      "biliary_pattern",
+      "ulcer_or_gastritis_risk_pattern",
+      "pancreatic_warning_pattern"
+    ],
+    "right_upper_abdominal_pain_after_fatty_food": [
+      "biliary_pattern",
+      "fatty_food_overload",
+      "pancreatic_warning_pattern"
+    ],
+    "burning_or_acid_after_food": [
+      "reflux_or_postprandial_reflux",
+      "functional_dyspepsia_or_gastric_irritation"
+    ],
+    "severe_upper_abdominal_pain_with_vomiting": [
+      "pancreatic_warning_pattern",
+      "biliary_pattern",
+      "ulcer_complication_pattern",
+      "urgent_general_abdominal_route"
+    ],
+    "upper_abdominal_pain_plus_black_stool_or_blood": [
+      "ulcer_complication_pattern",
+      "urgent_general_abdominal_route"
+    ]
+  },
+  "causes": [
+    {
+      "id": "functional_dyspepsia_or_gastric_irritation",
+      "title": "Диспепсия / раздражение желудка",
+      "priority": "high"
+    },
+    {
+      "id": "fatty_food_overload",
+      "title": "Перегрузка верхнего ЖКТ жирной пищей",
+      "priority": "high"
+    },
+    {
+      "id": "reflux_or_postprandial_reflux",
+      "title": "Рефлюкс / изжога после еды",
+      "priority": "high"
+    },
+    {
+      "id": "biliary_pattern",
+      "title": "Желчный паттерн",
+      "priority": "high"
+    },
+    {
+      "id": "simple_overeating",
+      "title": "Переедание",
+      "priority": "medium_high"
+    },
+    {
+      "id": "ulcer_or_gastritis_risk_pattern",
+      "title": "Гастрит/язвенный риск-паттерн",
+      "priority": "medium_high"
+    },
+    {
+      "id": "pancreatic_warning_pattern",
+      "title": "Поджелудочная: настораживающий паттерн",
+      "priority": "conditional_high"
+    },
+    {
+      "id": "ulcer_complication_pattern",
+      "title": "Осложнение язвы / кровотечение",
+      "priority": "urgent"
+    },
+    {
+      "id": "ibs_not_primary_for_upper_abdomen",
+      "title": "IBS не как первичная причина изолированной боли вверху живота",
+      "priority": "low_conditional"
+    },
+    {
+      "id": "cardiac_or_non_gi_red_flag_route",
+      "title": "Не-ЖКТ срочная ветка",
+      "priority": "urgent"
+    },
+    {
+      "id": "urgent_general_abdominal_route",
+      "title": "Общая срочная брюшная ветка",
+      "priority": "urgent"
+    }
+  ],
+  "routing_logic": {
+    "if_symptoms_include": {
+      "early_satiety_plus_postmeal_fullness_plus_nausea": [
+        "functional_dyspepsia_or_gastric_irritation"
+      ],
+      "burning_or_acid_or_worse_lying_down": [
+        "reflux_or_postprandial_reflux"
+      ],
+      "right_upper_abdominal_pain_after_fatty_food": [
+        "biliary_pattern"
+      ],
+      "severe_upper_abdominal_pain_radiates_to_back": [
+        "pancreatic_warning_pattern",
+        "urgent_general_abdominal_route"
+      ],
+      "black_stool_or_blood_in_vomit": [
+        "ulcer_complication_pattern",
+        "urgent_general_abdominal_route"
+      ],
+      "chest_pain_or_shortness_of_breath": [
+        "cardiac_or_non_gi_red_flag_route"
+      ],
+      "fainting_or_near_fainting": [
+        "ulcer_complication_pattern",
+        "cardiac_or_non_gi_red_flag_route",
+        "urgent_general_abdominal_route"
+      ],
+      "jaundice": [
+        "biliary_pattern",
+        "pancreatic_warning_pattern",
+        "urgent_general_abdominal_route"
+      ]
+    },
+    "if_trigger_contains": {
+      "fatty_or_fried_meal": [
+        "fatty_food_overload",
+        "biliary_pattern",
+        "functional_dyspepsia_or_gastric_irritation",
+        "reflux_or_postprandial_reflux"
+      ],
+      "large_meal": [
+        "simple_overeating",
+        "functional_dyspepsia_or_gastric_irritation",
+        "reflux_or_postprandial_reflux"
+      ],
+      "alcohol_or_nsaids": [
+        "ulcer_or_gastritis_risk_pattern",
+        "reflux_or_postprandial_reflux",
+        "pancreatic_warning_pattern"
+      ]
+    }
+  },
+  "red_flags": [
+    "сильная или нарастающая боль в верхней части живота",
+    "сильная боль справа под рёбрами",
+    "боль, отдающая в спину",
+    "многократная рвота",
+    "температура или озноб",
+    "чёрный стул",
+    "кровь в рвоте",
+    "рвота типа кофейной гущи",
+    "обморок или выраженное головокружение",
+    "одышка",
+    "боль в груди",
+    "желтуха",
+    "невозможность пить жидкость",
+    "резкое ухудшение общего состояния"
+  ],
+  "tests_logic": {
+    "single_mild_episode_after_food": {
+      "recommend_immediate_tests": false,
+      "message": "Если это единичный лёгкий эпизод и симптомы проходят, срочные анализы обычно не нужны."
+    },
+    "recurrent_dyspepsia_or_upper_abdominal_discomfort": {
+      "recommend_tests": [
+        "общий план обследования по клинической необходимости",
+        "обсуждение H. pylori",
+        "оценка лекарств, включая НПВП",
+        "дальнейшая диагностика по симптомам"
+      ]
+    },
+    "recurrent_fatty_food_or_right_upper_abdomen_pattern": {
+      "recommend_tests": [
+        "АЛТ",
+        "АСТ",
+        "билирубин",
+        "ГГТ",
+        "амилаза",
+        "липаза",
+        "УЗИ органов брюшной полости"
+      ]
+    },
+    "alarm_features": {
+      "recommend_urgent_evaluation": true,
+      "message": "При красных флагах не откладывать очную оценку."
+    }
+  },
+  "patient_safe_response_structure": [
+    "what_is_most_likely",
+    "possible_causes_in_priority_order",
+    "what_to_do_now",
+    "when_to_seek_urgent_care",
+    "whether_tests_are_needed_if_recurrent"
+  ]
+}

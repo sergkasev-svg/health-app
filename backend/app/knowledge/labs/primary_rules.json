@@ -1,0 +1,40 @@
+{
+  "patch_name": "zazdorovie_knowledge_patch_2026-03-17",
+  "description": "PRIMARY rules — used always for lab interpretation",
+  "thyroid_diagnostics": {
+    "priority": 1,
+    "first_line": "TSH",
+    "rules": [
+      "TSH first-line marker for thyroid function",
+      "Free T4 second-level confirmation",
+      "Free T3 for suspected T3-toxicosis",
+      "Use anti-TPO and anti-TG together when autoimmune thyroid disease is suspected",
+      "ITI=(freeT3+freeT4)/TSH",
+      "IPK=freeT4/freeT3"
+    ],
+    "interpretation": {
+      "tsh_normal": "overt_hypo_hyperthyroidism_less_likely",
+      "tsh_high": "consider_primary_hypothyroidism_then_check_free_T4",
+      "tsh_low": "consider_hyperthyroidism_or_central_hypothyroidism_then_check_free_T4"
+    }
+  },
+  "anemia_patterns": {
+    "priority": 1,
+    "triggers": ["low_hemoglobin", "low_MCH", "low_reticulocytes"],
+    "rules": [
+      "Low Hb + low MCH suggests iron deficiency / anemia pattern",
+      "Low reticulocytes with low Hb supports iron deficiency",
+      "Do not diagnose from CBC alone without context"
+    ],
+    "allowed_hypotheses": ["iron_deficiency", "anemia_pattern", "possible_allergy"]
+  },
+  "basic_lab_logic": {
+    "priority": 1,
+    "rules": [
+      "Use laboratory's own reference ranges when available",
+      "Do not override primary TSH/freeT4 interpretation by derived indices alone",
+      "Eosinophilia interpret directly before any derived index",
+      "Max 3 hypotheses to user; no rare diagnoses without symptom support"
+    ]
+  }
+}

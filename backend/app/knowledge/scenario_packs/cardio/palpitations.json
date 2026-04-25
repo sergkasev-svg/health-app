@@ -1,0 +1,47 @@
+{
+  "id": "cardio_palpitations",
+  "category": "cardio",
+  "title_ru": "Сердцебиение",
+  "version": "v1",
+  "chief_complaint_patterns": [
+    "сердцебиение"
+  ],
+  "body_regions": [
+    "chest",
+    "heart",
+    "circulation"
+  ],
+  "must_ask": [
+    "Когда начинается дискомфорт — в покое или при нагрузке?",
+    "Есть ли одышка, слабость или потливость?",
+    "Есть ли скачки давления или пульса?",
+    "Отдает ли боль в руку, спину или челюсть?"
+  ],
+  "red_flags": [
+    "crushing_chest_pain",
+    "syncope",
+    "severe_shortness_of_breath",
+    "one_sided_leg_swelling"
+  ],
+  "likely_hypotheses": [
+    "arrhythmia_or_bp_issue",
+    "cardiac_ischemia_risk",
+    "noncardiac_chest_pain_but_rule_out_red_flags"
+  ],
+  "possible_tests": [
+    "blood pressure",
+    "ECG",
+    "pulse rate check",
+    "urgent evaluation if red flags"
+  ],
+  "self_care": [
+    "избегать нагрузки до оценки",
+    "контроль давления и пульса",
+    "не откладывать очную оценку при усилении симптомов"
+  ],
+  "care_path": {
+    "default": "planned_or_urgent_assessment_by_symptoms",
+    "if_red_flags": "urgent_or_emergency_assessment"
+  },
+  "notes": "Starter scenario pack for triage flow. Requires clinical review before production use."
+}

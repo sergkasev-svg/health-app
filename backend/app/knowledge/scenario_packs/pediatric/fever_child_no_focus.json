@@ -1,0 +1,42 @@
+{
+  "id": "pediatric_fever_child_no_focus",
+  "category": "pediatric",
+  "title_ru": "Температура у ребенка без явного очага",
+  "version": "v1",
+  "chief_complaint_patterns": [
+    "у ребенка температура без явной причины"
+  ],
+  "body_regions": [
+    "systemic",
+    "respiratory"
+  ],
+  "must_ask": [
+    "Какой возраст ребенка?",
+    "Сколько дней температура?",
+    "Пьет ли ребенок жидкость?"
+  ],
+  "red_flags": [
+    "lethargy",
+    "respiratory_distress",
+    "seizure"
+  ],
+  "likely_hypotheses": [
+    "viral_fever_like",
+    "urinary_infection_like",
+    "otitis_like"
+  ],
+  "possible_tests": [
+    "CBC_if_persistent",
+    "urinalysis"
+  ],
+  "self_care": [
+    "обильное питье",
+    "контроль температуры",
+    "наблюдение за активностью"
+  ],
+  "care_path": {
+    "default": "planned_or_urgent_assessment_by_symptoms",
+    "if_red_flags": "urgent_or_emergency_assessment"
+  },
+  "notes": "Phase-2 scenario pack for pre-LLM ranking and triage. Requires clinical review before production use."
+}
