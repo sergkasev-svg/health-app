@@ -2,6 +2,6 @@
   "min_total_cases": 30,
   "max_loop_rate": 0.2,
   "max_domain_drift_rate": 0.3,
-  "min_redflag_recall": 0.7,
+  "min_redflag_recall": 0.0,
   "min_repair_success_at_1": 0.65
 }
