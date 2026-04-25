@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-04-25T10:41:34.744586+00:00",
+  "generated_at_utc": "2026-04-25T12:05:55.259195+00:00",
   "cases_file": "D:\\website zazdorovie.ru\\health-app\\backend\\tests\\clinical\\cases_clinical_v1_ci_expect.jsonl",
   "thresholds_file": "D:\\website zazdorovie.ru\\health-app\\backend\\tests\\clinical\\release_gate_thresholds_v1_ci.json",
   "gate_level": "v1-ci",
