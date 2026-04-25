@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-04-25T15:28:27.359974+00:00",
+  "generated_at_utc": "2026-04-25T17:14:09.387350+00:00",
   "cases_file": "C:\\Users\\Gamer\\health-app\\backend\\tests\\clinical\\cases_clinical_v1.jsonl",
   "thresholds_file": "C:\\Users\\Gamer\\health-app\\backend\\tests\\clinical\\release_gate_thresholds_v1.json",
   "gate_level": "v1",

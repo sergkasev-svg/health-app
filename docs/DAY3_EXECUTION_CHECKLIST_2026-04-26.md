@@ -10,10 +10,10 @@
   - [ ] auth/session
   - [ ] core user flow
   - [ ] critical API endpoints
-- [ ] Перепроверить clinical gates (контрольный прогон):
-  - [ ] `python backend/scripts/drift_debug_run.py`
-  - [ ] `python backend/scripts/run_clinical_release_gate.py --level v1-ci`
-  - [ ] `python backend/scripts/run_clinical_release_gate.py --level v1`
+- [x] Перепроверить clinical gates (контрольный прогон):
+  - [x] `python backend/scripts/drift_debug_run.py`
+  - [x] `python backend/scripts/run_clinical_release_gate.py --level v1-ci`
+  - [x] `python backend/scripts/run_clinical_release_gate.py --level v1`
 
 ## 2) Mobile Release Readiness
 
