@@ -93,3 +93,9 @@
 - QA owner: `[назначить]`
 - Investor owner: `[назначить]`
 - Target launch date: `[дата]`
+
+## 7) Day 1 Execution Artifacts
+
+- `docs/RELEASE_DAY1_ACTION_PACK.md`
+- `docs/MOBILE_RELEASE_CHECKLIST_DAY1.md`
+- `docs/INVESTOR_DECK_SKELETON.md`

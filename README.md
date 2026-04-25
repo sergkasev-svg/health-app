@@ -20,7 +20,10 @@
 - Acceptance checklist (50): `docs/RELEASE_ACCEPTANCE_CHECKLIST_50.md`
 - Go/No-Go template: `docs/RELEASE_GO_NO_GO_TEMPLATE.md`
 - Web+Mobile release plan board: `docs/RELEASE_PLAN_WEB_MOBILE.md`
+- Day 1 execution pack: `docs/RELEASE_DAY1_ACTION_PACK.md`
+- Mobile Day 1 release checklist: `docs/MOBILE_RELEASE_CHECKLIST_DAY1.md`
 - Investor demo checklist: `docs/INVESTOR_DEMO_CHECKLIST.md`
+- Investor deck skeleton: `docs/INVESTOR_DECK_SKELETON.md`
 - Unified Go/No-Go checklist: `docs/GO_NO_GO_CHECKLIST.md`
 - Clinical harness next steps: `backend/tests/clinical/HARNESS_NEXT_STEPS.md`
 - Clinical pre-release checklist: `backend/tests/clinical/PRE_RELEASE_CHECKLIST.md`
