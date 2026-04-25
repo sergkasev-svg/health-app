@@ -28,6 +28,7 @@
 - Day 3 preflight status: `docs/DAY3_PREFLIGHT_STATUS_2026-04-25.md`
 - Mobile Day 1 release checklist: `docs/MOBILE_RELEASE_CHECKLIST_DAY1.md`
 - Investor demo checklist: `docs/INVESTOR_DEMO_CHECKLIST.md`
+- Investor demo dry-run (7-10 min): `docs/INVESTOR_DEMO_DRY_RUN_7_10_MIN.md`
 - Investor deck skeleton: `docs/INVESTOR_DECK_SKELETON.md`
 - Investor deck Day 1 draft: `docs/INVESTOR_DECK_DRAFT_DAY1_2026-04-25.md`
 - Unified Go/No-Go checklist: `docs/GO_NO_GO_CHECKLIST.md`
