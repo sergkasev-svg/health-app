@@ -32,6 +32,7 @@
 - Investor deck skeleton: `docs/INVESTOR_DECK_SKELETON.md`
 - Investor deck Day 1 draft: `docs/INVESTOR_DECK_DRAFT_DAY1_2026-04-25.md`
 - Unified Go/No-Go checklist: `docs/GO_NO_GO_CHECKLIST.md`
+- Go/No-Go decision memo draft: `docs/GO_NO_GO_DECISION_MEMO_DRAFT_2026-04-25.md`
 - Clinical harness next steps: `backend/tests/clinical/HARNESS_NEXT_STEPS.md`
 - Clinical pre-release checklist: `backend/tests/clinical/PRE_RELEASE_CHECKLIST.md`
 - Release slice 2026-04-25: `backend/tests/clinical/RELEASE_SLICE_2026-04-25.md`

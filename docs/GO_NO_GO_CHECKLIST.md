@@ -5,9 +5,9 @@
 ## P0 — Must Pass
 
 ### Product & Quality
-- [ ] `v1-ci` gate PASS.
-- [ ] `v1` full gate PASS.
-- [ ] `drift_debug_run.py`: `drift_cases=0` или принятое исключение задокументировано.
+- [x] `v1-ci` gate PASS.
+- [x] `v1` full gate PASS.
+- [x] `drift_debug_run.py`: `drift_cases=0` или принятое исключение задокументировано.
 - [ ] Smoke tests пройдены на web и mobile.
 
 ### Reliability & Operations
