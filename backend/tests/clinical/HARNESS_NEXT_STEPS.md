@@ -47,3 +47,9 @@
   - `scripts/run_clinical_release_gate.py --level v1-ci`
   - отчёт: `tests/clinical/reports/release_gate_v1_ci_latest.json`
 - Добавлен workflow: `.github/workflows/clinical-v1-ci.yml` (drift debug + `v1-ci` gate на push/PR).
+
+### Шаг 6 — сделано (2026-04-25)
+- Выпущен релизный тег: `v1-harness-2026-04-25`.
+- Дальнейшее аккуратное ужесточение v1: `max_domain_drift_rate` **0.20 → 0.18**.
+- После ужесточения: 2 полных прогона gate PASS (`domain_drift_rate=0.0`, `repair_success_at_1=1.0`, `redflag_recall=0.8125..0.875`).
+- Обновлён investor quality report (`latest.json`/`latest.md`) после новых прогонов.

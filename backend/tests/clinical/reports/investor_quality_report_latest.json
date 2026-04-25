@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-04-25T09:02:06.291753+00:00",
+  "generated_at_utc": "2026-04-25T12:30:48.626790+00:00",
   "overall_status": "PASS",
   "levels": [
     {
@@ -17,7 +17,7 @@
         "total_cases": 35.0,
         "loop_rate": 0.0,
         "domain_drift_rate": 0.08571428571428572,
-        "redflag_recall": 1.0,
+        "redflag_recall": 0.8333333333333334,
         "repair_success_at_1": 1.0,
         "non_empty_response_rate": 1.0,
         "human_tone_rate": 1.0
@@ -41,7 +41,7 @@
       "metrics": {
         "total_cases": 1040.0,
         "loop_rate": 0.0,
-        "domain_drift_rate": 0.0038461538461538464,
+        "domain_drift_rate": 0.0,
         "redflag_recall": 0.875,
         "repair_success_at_1": 1.0,
         "non_empty_response_rate": 1.0,
