@@ -4,6 +4,8 @@
 **Scope:** Web + Mobile release candidate + investor demo track  
 **Proposed verdict:** **CONDITIONAL GO** — clinical quality preflight is green; final GO requires closing remaining P0 ops/product blocks below.
 
+**Default owner (interim, until roles split on team):** Sergey (`sergkasev@gmail.com`).
+
 ---
 
 ## Evidence (PASS)
@@ -21,16 +23,16 @@
 
 | Item | Owner (role) | Owner (name) | Target |
 |------|----------------|--------------|--------|
-| Web + mobile smoke on RC env | QA | `[name]` | `[date]` |
-| Monitoring + alerts live | Ops | `[name]` | `[date]` |
-| Logs accessible + spot-checked | Ops / Tech | `[name]` | `[date]` |
-| Backup/restore confirmed | Ops | `[name]` | `[date]` |
-| Rollback plan dry-run | Tech | `[name]` | `[date]` |
-| Secrets / env hygiene | Tech | `[name]` | `[date]` |
-| Privacy + support URLs | Product / Legal | `[name]` | `[date]` |
-| Mobile store metadata (permissions text) | Mobile / Product | `[name]` | `[date]` |
-| RC tag + release notes | Release | `[name]` | `[date]` |
-| 24–48h post-release on-call | Ops | `[name]` | `[date]` |
+| Web + mobile smoke on RC env | QA | Sergey (interim) | 2026-04-28 EOD (UTC+3) |
+| Monitoring + alerts live | Ops | Sergey (interim) | 2026-04-28 EOD (UTC+3) |
+| Logs accessible + spot-checked | Ops / Tech | Sergey (interim) | 2026-04-28 EOD (UTC+3) |
+| Backup/restore confirmed | Ops | Sergey (interim) | 2026-04-28 EOD (UTC+3) |
+| Rollback plan dry-run | Tech | Sergey (interim) | 2026-04-28 EOD (UTC+3) |
+| Secrets / env hygiene | Tech | Sergey (interim) | 2026-04-28 EOD (UTC+3) |
+| Privacy + support URLs | Product / Legal | Sergey (interim) | 2026-04-28 EOD (UTC+3) |
+| Mobile store metadata (permissions text) | Mobile / Product | Sergey (interim) | 2026-04-28 EOD (UTC+3) |
+| RC tag + release notes | Release | Sergey (interim) | 2026-04-28 EOD (UTC+3) |
+| 24–48h post-release on-call | Ops | Sergey (interim) | 2026-04-28 EOD (UTC+3) |
 
 ---
 
@@ -38,13 +40,13 @@
 
 | Role | Name | Signature / Date |
 |------|------|------------------|
-| Product | `[name]` | `[ ]` |
-| Tech | `[name]` | `[ ]` |
-| QA | `[name]` | `[ ]` |
-| Ops | `[name]` | `[ ]` |
+| Product | Sergey (interim) | pending |
+| Tech | Sergey (interim) | pending |
+| QA | Sergey (interim) | pending |
+| Ops | Sergey (interim) | pending |
 
 **Final verdict:** `GO` / `NO-GO` / `CONDITIONAL GO` — **`CONDITIONAL GO`** (until P0 table closed)  
-**Decision time:** `[UTC timestamp]`
+**Decision time (draft):** 2026-04-25 20:00 (UTC+3) — to be reconfirmed at final GO review.
 
 ---
 
