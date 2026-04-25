@@ -21,9 +21,11 @@
 - Go/No-Go template: `docs/RELEASE_GO_NO_GO_TEMPLATE.md`
 - Web+Mobile release plan board: `docs/RELEASE_PLAN_WEB_MOBILE.md`
 - Day 1 execution pack: `docs/RELEASE_DAY1_ACTION_PACK.md`
+- Day 1 execution status: `docs/DAY1_EXECUTION_STATUS_2026-04-25.md`
 - Mobile Day 1 release checklist: `docs/MOBILE_RELEASE_CHECKLIST_DAY1.md`
 - Investor demo checklist: `docs/INVESTOR_DEMO_CHECKLIST.md`
 - Investor deck skeleton: `docs/INVESTOR_DECK_SKELETON.md`
+- Investor deck Day 1 draft: `docs/INVESTOR_DECK_DRAFT_DAY1_2026-04-25.md`
 - Unified Go/No-Go checklist: `docs/GO_NO_GO_CHECKLIST.md`
 - Clinical harness next steps: `backend/tests/clinical/HARNESS_NEXT_STEPS.md`
 - Clinical pre-release checklist: `backend/tests/clinical/PRE_RELEASE_CHECKLIST.md`
